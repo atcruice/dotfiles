@@ -63,6 +63,7 @@ PROMPT_COMMAND=exit_status
 
 # aliases
 alias ls="ls -Alh"
+alias git?="git rev-parse --show-toplevel"
 
 # exports
 export CLICOLOR=1
