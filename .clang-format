@@ -14,7 +14,7 @@ BreakBeforeBinaryOperators: false
 BreakBeforeBraces: Allman
 BreakBeforeTernaryOperators: false
 BreakConstructorInitializersBeforeComma: true
-ColumnLimit: 0
+ColumnLimit: 79
 CommentPragmas: '^ IWYU pragma:'
 ConstructorInitializerAllOnOneLineOrOnePerLine: true
 ConstructorInitializerIndentWidth: 4
@@ -23,7 +23,7 @@ Cpp11BracedListStyle: true
 DerivePointerBinding: false
 # ExperimentalAutoDetectBinPacking: false
 IndentCaseLabels: true
-IndentFunctionDeclarationAfterType: false
+IndentFunctionDeclarationAfterType: true
 IndentWidth: 4
 Language: Cpp
 MaxEmptyLinesToKeep: 1
@@ -38,7 +38,7 @@ PenaltyExcessCharacter: 1000000
 PenaltyReturnTypeOnItsOwnLine: 60
 PointerBindsToType: true
 SpaceBeforeAssignmentOperators: true
-SpaceBeforeParens: Always # ControlStatements
+SpaceBeforeParens: ControlStatements
 SpaceInEmptyParentheses: false
 SpacesBeforeTrailingComments: 1
 SpacesInAngles: false
