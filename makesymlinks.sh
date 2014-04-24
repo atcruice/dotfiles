@@ -8,20 +8,17 @@ olddir=~/dotfiles_old # old dotfiles backup directory
 files="bash_profile bashrc clang-format gitconfig gitignore_global vimrc"
 
 # create backup directory
-echo -n "Creating $olddir for backup of any existing dotfiles in ~ ..."
+echo -n "Creating $olddir for backup of existing dotfiles ..."
 mkdir -p $olddir
 echo "done"
 
-# change to the dotfiles directory
-echo -n "Changing to the $dir directory ..."
 cd $dir
-echo "done"
 
 # move existing dotfiles in ~ to backup directory
 # create symlinks from ~ to files in ~/dotfiles specified in $files
+echo "Moving existing dotfiles to $olddir"
 for file in $files; do
-    echo "Moving any existing dotfiles from ~ to $olddir"
-    mv ~/.$file ~/dotfiles_old/
-    echo "Creating symlink to $file in home directory."
+    mv ~/.$file ~/dotfiles_old/$file
+    echo "Creating symlink to $file in ~"
     ln -s $dir/$file ~/.$file
 done
