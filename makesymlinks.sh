@@ -4,8 +4,8 @@
 
 dir=~/dotfiles # dotfiles directory
 olddir=~/dotfiles_old # old dotfiles backup directory
-# list of items to symlink in homedir
-items="bash_profile bashrc clang-format gitconfig gitignore_global oh-my-zsh vimrc zshrc"
+# list of files to symlink in homedir
+files="alexcruice.zsh-theme bash_profile bashrc clang-format gitconfig gitignore_global vimrc zshrc"
 
 # create backup directory
 echo -n "Creating $olddir for backup of existing dotfiles ..."
@@ -15,10 +15,13 @@ echo "done"
 cd $dir
 
 # move existing dotfiles in ~ to backup directory
-# create symlinks from ~ to items in ~/dotfiles specified in $items
+# create symlinks from ~ to files in ~/dotfiles specified in $files
 echo "Moving existing dotfiles to $olddir"
-for item in $items; do
-    mv ~/.$item ~/dotfiles_old/$item
-    echo "Creating symlink to $item in ~"
-    ln -s $dir/$item ~/.$item
+for file in $files; do
+    mv ~/.$file ~/dotfiles_old/$file
+    echo "Creating symlink to $file in ~"
+    ln -s $dir/$file ~/.$file
 done
+# workaround for zsh theme
+rm ~/.alexcruice.zsh-theme
+cp ~/dotfiles/alexcruice.zsh-theme ~/.oh-my-zsh/themes/
