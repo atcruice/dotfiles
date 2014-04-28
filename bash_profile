@@ -63,7 +63,7 @@ PROMPT_COMMAND=exit_status
 
 # aliases
 alias ls="ls -Alh"
-alias git?="git rev-parse --show-toplevel"
+alias wgit="git rev-parse --show-toplevel"
 
 # exports
 export CLICOLOR=1
@@ -78,6 +78,8 @@ PATH="$PATH:/usr/local/mysql/bin"
 PATH="$PATH:/Applications/androidsdk/tools:/Applications/androidsdk/platform-tools"
 PATH="$PATH:/opt/local/bin:/opt/local/sbin:" # MacPorts
 PATH="$PATH:/usr/local/mongodb/bin"
+PATH="$PATH:$HOME/.rvm/bin"
+PATH="$PATH:/usr/local/heroku/bin"
 export PATH
 
 # init rvm
