@@ -50,7 +50,8 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 # aliases
-alias ls="ls -Alh"
+alias ls="ls -A"
+alias lsl="ls -Alh"
 alias wgit="git rev-parse --show-toplevel"
 
 # exports

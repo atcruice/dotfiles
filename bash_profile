@@ -62,7 +62,8 @@ function exit_status() {
 PROMPT_COMMAND=exit_status
 
 # aliases
-alias ls="ls -Alh"
+alias ls="ls -A"
+alias lsl="ls -Alh"
 alias wgit="git rev-parse --show-toplevel"
 
 # exports
