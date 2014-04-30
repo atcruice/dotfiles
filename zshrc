@@ -67,12 +67,8 @@ PATH="$PATH:/usr/local/mysql/bin"
 PATH="$PATH:/Applications/androidsdk/tools:/Applications/androidsdk/platform-tools"
 PATH="$PATH:/opt/local/bin:/opt/local/sbin:" # MacPorts
 PATH="$PATH:/usr/local/mongodb/bin"
-PATH="$PATH:$HOME/.rvm/bin"
 PATH="$PATH:/usr/local/heroku/bin"
 export PATH
-
-# init rvm
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # SSH changes
 SSH_ENV=$HOME/.ssh/environment
@@ -114,3 +110,5 @@ fi
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting

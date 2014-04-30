@@ -1,3 +1,5 @@
+source ~/.profile
+
 # colours
 BLACK=$(tput setaf 0)
 BRIGHT_BLACK=$(tput setaf 8)
@@ -79,12 +81,8 @@ PATH="$PATH:/usr/local/mysql/bin"
 PATH="$PATH:/Applications/androidsdk/tools:/Applications/androidsdk/platform-tools"
 PATH="$PATH:/opt/local/bin:/opt/local/sbin:" # MacPorts
 PATH="$PATH:/usr/local/mongodb/bin"
-PATH="$PATH:$HOME/.rvm/bin"
 PATH="$PATH:/usr/local/heroku/bin"
 export PATH
-
-# init rvm
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # SSH changes
 SSH_ENV=$HOME/.ssh/environment
@@ -108,3 +106,5 @@ if [ -f "${SSH_ENV}" ]; then
 else
   start_agent;
 fi
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*

@@ -2,10 +2,14 @@
 # creates symlinks from home directory to dotfiles in ~/dotfiles
 # courtesy: github.com/michaeljsmalley/dotfiles
 
+# before
+# \curl -L http://install.ohmyz.sh | sh
+# \wget --no-check-certificate http://install.ohmyz.sh -O - | sh
+
 dir=~/dotfiles # dotfiles directory
 olddir=~/dotfiles_old # old dotfiles backup directory
 # list of files to symlink in homedir
-files="bash_profile bashrc clang-format gitconfig gitignore_global vimrc zprofile zshrc"
+files="bash_profile bashrc clang-format gitconfig gitignore_global profile vimrc zlogin zshrc"
 
 # create backup directory
 echo -n "Creating $olddir for backup of existing dotfiles ..."
@@ -23,5 +27,5 @@ for file in $files; do
     ln -s $dir/$file ~/.$file
 done
 
-# move zsh theme
-cp ~/dotfiles/alexcruice.zsh-theme ~/.oh-my-zsh/themes/
+# link zsh theme
+ln -s ~/dotfiles/alexcruice.zsh-theme ~/.oh-my-zsh/themes/
