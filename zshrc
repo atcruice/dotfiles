@@ -49,6 +49,11 @@ plugins=(gem git git-flow macports osx rails ruby rvm sublime)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
+setopt correctall
+setopt globdots
+setopt ignoreeof
+setopt noclobber
+
 # aliases
 alias ls="ls -A"
 alias lsl="ls -Alh"
