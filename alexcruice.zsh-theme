@@ -17,7 +17,7 @@ prompt_context() {
 }
 
 local ret_status="%(?:%{$fg[green]%}:%{$fg[red]%})"
-PROMPT='%{$fg[magenta]%}$(prompt_context)%{$fg[cyan]%}%~$(git_prompt_info) ${ret_status}$ '
+PROMPT=$'%{$fg[magenta]%}$(prompt_context)%{$fg[cyan]%}%~$(git_prompt_info)\n${ret_status}$%{$reset_color%} '
 RPROMPT='%{$fg[red]%}$(rvm-prompt)%{$reset_color%}'
 
 ZSH_THEME_GIT_PROMPT_PREFIX=" %{$fg[yellow]%}"

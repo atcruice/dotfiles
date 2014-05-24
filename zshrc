@@ -60,6 +60,7 @@ alias lsl="ls -Alh"
 alias wgit="git rev-parse --show-toplevel"
 
 # exports
+source $HOME/.secrets
 export CLICOLOR=1
 export NXJ_HOME="/Applications/leJOS_NXJ_0.9.1beta-3"
 export NDK_CCACHE=/opt/local/bin/ccache # C complier caching
