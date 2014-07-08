@@ -71,9 +71,10 @@ PATH="$PATH:/Applications/mash-snow-leopard/bin"
 PATH="$PATH:/Applications/eclipse"
 PATH="$PATH:/usr/local/mysql/bin"
 PATH="$PATH:/Applications/androidsdk/tools:/Applications/androidsdk/platform-tools"
-PATH="$PATH:/opt/local/bin:/opt/local/sbin:" # MacPorts
+PATH="$PATH:/opt/local/sbin" # MacPorts
 PATH="$PATH:/usr/local/mongodb/bin"
 PATH="$PATH:/usr/local/heroku/bin"
+PATH="$PATH:/Applications/Postgres.app/Contents/Versions/9.3/bin"
 export PATH
 
 # SSH changes
