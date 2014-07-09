@@ -22,9 +22,9 @@ cd $dir
 # create symlinks from ~ to files in ~/dotfiles specified in $files
 echo "Moving existing dotfiles to $olddir"
 for file in $files; do
-    mv ~/.$file ~/dotfiles_old/$file
+    mv "$HOME/.$file" "$HOME/dotfiles_old/$file"
     echo "Creating symlink to $file in ~"
-    ln -s $dir/$file ~/.$file
+    ln -s "$dir/$file" "$HOME/.$file"
 done
 
 # link zsh theme
