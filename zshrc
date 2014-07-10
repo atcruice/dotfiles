@@ -44,9 +44,9 @@ DISABLE_AUTO_TITLE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(gem git git-flow macports osx rails ruby rvm sublime)
+plugins=(macports rvm sublime)
 
-source $ZSH/oh-my-zsh.sh
+source "$ZSH/oh-my-zsh.sh"
 
 # User configuration
 setopt correctall
@@ -60,7 +60,7 @@ alias lsl="ls -Alh"
 alias wgit="git rev-parse --show-toplevel"
 
 # exports
-source $HOME/.secrets
+source "$HOME/.secrets"
 export CLICOLOR=1
 export NXJ_HOME="/Applications/leJOS_NXJ_0.9.1beta-3"
 export NDK_CCACHE=/opt/local/bin/ccache # C complier caching
@@ -76,29 +76,6 @@ PATH="$PATH:/usr/local/mongodb/bin"
 PATH="$PATH:/usr/local/heroku/bin"
 PATH="$PATH:/Applications/Postgres.app/Contents/Versions/9.3/bin"
 export PATH
-
-# SSH changes
-SSH_ENV=$HOME/.ssh/environment
-
-# start the ssh-agent
-function start_agent {
-  echo "Initializing new SSH agent..."
-  # spawn ssh-agent
-  /usr/bin/ssh-agent | sed 's/^echo/#echo/' > "${SSH_ENV}"
-  echo succeeded
-  chmod 600 "${SSH_ENV}"
-  . "${SSH_ENV}" > /dev/null
-  /usr/bin/ssh-add
-}
-
-if [ -f "${SSH_ENV}" ]; then
-  . "${SSH_ENV}" > /dev/null
-  ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
-    start_agent;
-  }
-else
-  start_agent;
-fi
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
