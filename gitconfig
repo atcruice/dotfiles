@@ -6,6 +6,7 @@
 	ui = true
 [core]
 	excludesfile = /Users/alexc/.gitignore_global
+	autocrlf = input
 [push]
   default = simple
 [alias]
@@ -14,3 +15,5 @@
 [filter "media"]
 	clean = git-media-clean %f
 	smudge = git-media-smudge %f
+[git-up "bundler"]
+	check = true
