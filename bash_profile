@@ -68,43 +68,24 @@ alias ls="ls -A"
 alias lsl="ls -Alh"
 alias wgit="git rev-parse --show-toplevel"
 
+# alias ta='tmux attach -t'
+# alias ts='tmux new-session -s'
+# alias tl='tmux list-sessions'
+
 # exports
+export EDITOR='vim'
 export CLICOLOR=1
-export NXJ_HOME="/Applications/leJOS_NXJ_0.9.1beta-3"
-export NDK_CCACHE=/opt/local/bin/ccache # C complier caching
-export NUM_CPUS=4
-export MASH_ENV_PATH="/Applications/mash-snow-leopard/env"
-PATH="$PATH:$NXJ_HOME/bin"
-PATH="$PATH:/Applications/mash-snow-leopard/bin"
-PATH="$PATH:/Applications/eclipse"
+export NUM_CPUS="sysctl  -n hw.ncpu 2>/dev/null || grep processor -c /proc/cpuinfo"
+export HOMEBREW_GITHUB_API_TOKEN="1d12e6e83d151cf9b4da173bbbb7f07d9f7ffb14" # improve brew github API access
+PATH="/usr/local/opt/ccache/libexec:$PATH" # ccache
 PATH="$PATH:/usr/local/mysql/bin"
-PATH="$PATH:/Applications/androidsdk/tools:/Applications/androidsdk/platform-tools"
-PATH="$PATH:/opt/local/bin:/opt/local/sbin:" # MacPorts
 PATH="$PATH:/usr/local/mongodb/bin"
 PATH="$PATH:/usr/local/heroku/bin"
+PATH="$PATH:/Applications/Postgres.app/Contents/Versions/9.3/bin"
+PATH="/usr/local/bin:/usr/local/sbin:$PATH" # TODO: find origin of duplicate augmentation
+PATH="$HOME/.cabal/bin:$PATH"
 export PATH
 
-# SSH changes
-SSH_ENV=$HOME/.ssh/environment
-
-# start the ssh-agent
-function start_agent {
-  echo "Initializing new SSH agent..."
-  # spawn ssh-agent
-  /usr/bin/ssh-agent | sed 's/^echo/#echo/' > "${SSH_ENV}"
-  echo succeeded
-  chmod 600 "${SSH_ENV}"
-  . "${SSH_ENV}" > /dev/null
-  /usr/bin/ssh-add
-}
-
-if [ -f "${SSH_ENV}" ]; then
-  . "${SSH_ENV}" > /dev/null
-  ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
-    start_agent;
-  }
-else
-  start_agent;
-fi
+eval "$(direnv hook $0)"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*

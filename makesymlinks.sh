@@ -9,11 +9,11 @@
 dir=~/dotfiles # dotfiles directory
 olddir=~/dotfiles_old # old dotfiles backup directory
 # list of files to symlink in homedir
-files="bash_profile bashrc clang-format gemrc gitconfig gitignore_global profile rvmrc vimrc zlogin zprofile zshrc"
+files="bash_profile bashrc clang-format gemrc gitconfig gitignore_global jrubyrc profile rubocop.yml rvmrc tmux.conf vimrc zlogin zshrc"
 
 # create backup directory
 echo -n "Creating $olddir for backup of existing dotfiles ..."
-mkdir -p $olddir
+mkdir -p "$olddir"
 echo "done"
 
 cd $dir
@@ -28,4 +28,4 @@ for file in $files; do
 done
 
 # link zsh theme
-ln -s ~/dotfiles/alexcruice.zsh-theme ~/.oh-my-zsh/themes/
+ln -s "$HOME/dotfiles/alexcruice.zsh-theme" "$HOME/.oh-my-zsh/themes/"

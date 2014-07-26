@@ -44,12 +44,13 @@ DISABLE_AUTO_TITLE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(macports rvm sublime)
+plugins=(brew cabal npm tmux rvm sublime)
 
 source "$ZSH/oh-my-zsh.sh"
 
 # User configuration
-setopt correctall
+setopt correct
+# setopt correctall
 setopt globdots
 setopt ignoreeof
 setopt noclobber
@@ -58,41 +59,22 @@ setopt noclobber
 alias ls="ls -A"
 alias lsl="ls -Alh"
 alias wgit="git rev-parse --show-toplevel"
+alias vundle="vim +PluginInstall +qall"
 
 # exports
-source "$HOME/.secrets"
+export EDITOR='vim'
 export CLICOLOR=1
-export NXJ_HOME="/Applications/leJOS_NXJ_0.9.1beta-3"
-export NDK_CCACHE=/opt/local/bin/ccache # C complier caching
-export NUM_CPUS=4
-export MASH_ENV_PATH="/Applications/mash-snow-leopard/env"
-PATH="$PATH:$NXJ_HOME/bin"
-PATH="$PATH:/Applications/mash-snow-leopard/bin"
-PATH="$PATH:/Applications/eclipse"
+export NUM_CPUS="sysctl -n hw.ncpu 2>/dev/null || grep processor -c /proc/cpuinfo"
+export HOMEBREW_GITHUB_API_TOKEN="1d12e6e83d151cf9b4da173bbbb7f07d9f7ffb14" # improve brew github API access
+PATH="/usr/local/opt/ccache/libexec:$PATH" # ccache
 PATH="$PATH:/usr/local/mysql/bin"
-PATH="$PATH:/Applications/androidsdk/tools:/Applications/androidsdk/platform-tools"
-PATH="$PATH:/opt/local/sbin" # MacPorts
 PATH="$PATH:/usr/local/mongodb/bin"
 PATH="$PATH:/usr/local/heroku/bin"
 PATH="$PATH:/Applications/Postgres.app/Contents/Versions/9.3/bin"
+PATH="/usr/local/bin:/usr/local/sbin:$PATH" # TODO: find origin of duplicate augmentation
+PATH="$HOME/.cabal/bin:$PATH"
 export PATH
 
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
+eval "$(direnv hook $0)"
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
