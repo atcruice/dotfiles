@@ -2,7 +2,7 @@
 
 dotfiles_dir="$HOME/.dotfiles"
 dotfiles_backup="$HOME/.dotfiles_backup"
-files="bash_profile bashrc clang-format freshrc gitconfig gitignore jrubyrc rubocop.yml rvmrc tmux.conf vimrc"
+files="bash_profile bashrc clang-format freshrc gitconfig gitignore jrubyrc rubocop.yml rvmrc semaphore.token tmux.conf vimrc"
 
 echo "Creating dotfiles backup directory"
 mkdir -pv "$dotfiles_backup"

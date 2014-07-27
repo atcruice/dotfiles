@@ -138,4 +138,3 @@ set expandtab
 
 " Select colour scheme
 colorscheme delek
-

@@ -3,4 +3,4 @@ export EDITOR='vim'
 # improve brew github API access
 export HOMEBREW_GITHUB_API_TOKEN="1d12e6e83d151cf9b4da173bbbb7f07d9f7ffb14"
 # improve ccache performance
-export NUM_CPUS="sysctl  -n hw.ncpu 2>/dev/null || grep processor -c /proc/cpuinfo"
+export NUM_CPUS="$(sysctl  -n hw.ncpu 2>/dev/null || grep processor -c /proc/cpuinfo)"

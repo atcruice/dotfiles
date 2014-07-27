@@ -1,0 +1,100 @@
+# ANSI escape aliases
+RESET="\e[0m"
+BOLD_ON="\e[1m"
+BOLD_OFF="\e[22m"
+ITALIC_ON="\e[3m"
+ITALIC_OFF="\e[23m"
+UL_ON="\e[4m"
+UL_OFF="\e[24m"
+BLINK_ON="\e[5m"
+BLINK_OFF="\e[25m"
+INVERT_ON="\e[7m"
+INVERT_OFF="\e[27m"
+FG_BLACK="\e[30m"
+FG_RED="\e[31m"
+FG_GREEN="\e[32m"
+FG_YELLOW="\e[33m"
+FG_BLUE="\e[34m"
+FG_MAGENTA="\e[35m"
+FG_CYAN="\e[36m"
+FG_LIGHT_GREY="\e[37m"
+FG_DARK_GREY="\e[90m"
+FG_LIGHT_RED="\e[91m"
+FG_LIGHT_GREEN="\e[92m"
+FG_LIGHT_YELLOW="\e[93m"
+FG_LIGHT_BLUE="\e[94m"
+FG_LIGHT_MAGENTA="\e[95m"
+FG_LIGHT_MAGENTA="\e[96m"
+FG_WHITE="\e[97m"
+BG_BLACK="\e[40m"
+BG_RED="\e[41m"
+BG_GREEN="\e[42m"
+BG_YELLOW="\e[43m"
+BG_BLUE="\e[44m"
+BG_MAGENTA="\e[45m"
+BG_CYAN="\e[46m"
+BG_LIGHT_GREY="\e[47m"
+BG_DARK_GREY="\e[100m"
+BG_LIGHT_RED="\e[101m"
+BG_LIGHT_GREEN="\e[102m"
+BG_LIGHT_YELLOW="\e[103m"
+BG_LIGHT_BLUE="\e[104m"
+BG_LIGHT_MAGENTA="\e[105m"
+BG_LIGHT_CYAN="\e[106m"
+BG_WHITE="\e[107m"
+
+function user_host {
+  local user=""
+  local host=""
+
+  if [[ $(whoami) != "alexc" ]]; then
+    user="\u"
+  fi
+
+  if [[ "$(hostname -s)" != "macbook" ]]; then
+    host="@\h"
+  fi
+
+  if [[ -z $user && -z $host ]]; then
+    echo ""
+  else
+    echo "\[$FG_BLACK\]\[$BG_LIGHT_MAGENTA\] $user$host \[$RESET\]"
+  fi
+}
+
+function ruby_status {
+  echo "\[$FG_BLACK\]\[$BG_LIGHT_RED\] $(rvm-prompt) \[$RESET\]"
+}
+
+function cwd {
+  echo "\[$FG_BLACK\]\[$BG_LIGHT_CYAN\] \w \[$RESET\]"
+}
+
+function git_info {
+  # check if we're in a git repo
+  git rev-parse --is-inside-work-tree &>/dev/null || return
+
+  # quickest check for what branch we're on
+  local branch=$(git symbolic-ref -q HEAD | sed -e 's|^refs/heads/||')
+
+  # check if it's dirty (via github.com/sindresorhus/pure)
+  local dirty=$(git diff --quiet --ignore-submodules HEAD &>/dev/null; [ $? -eq 1 ]&& echo -e "*")
+
+  echo "\[$FG_BLACK\]\[$BG_LIGHT_YELLOW\] $branch$dirty \[$RESET\]"
+}
+
+function exit_good {
+  echo "$(user_host)$(ruby_status)$(cwd)$(git_info)$(printf \"\\n\")\[$BOLD_ON\]\[$FG_GREEN\]\$ \[$RESET\]"
+}
+
+function exit_bad {
+  echo "$(user_host)$(ruby_status)$(cwd)$(git_info)$(printf \"\\n\")\[$BOLD_ON\]\[$FG_RED\]\$ \[$RESET\]"
+}
+
+function custom_prompt {
+  PS1="\`if [ \$? = 0 ]; then echo $(exit_good); else echo $(exit_bad); fi\`"
+}
+
+# custom prompt
+PROMPT_COMMAND=custom_prompt
+
