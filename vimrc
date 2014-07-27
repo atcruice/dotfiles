@@ -12,9 +12,20 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
+Plugin 'airblade/vim-gitgutter'
+Plugin 'chreekat/vim-paren-crosshairs'
+Plugin 'ervandew/supertab'
+Plugin 'jeetsukumaran/vim-buffergator'
+Plugin 'jpo/vim-railscasts-theme'
+" Plugin 'kien/ctrlp.vim'
+Plugin 'mileszs/ack.vim'
+Plugin 'nanotech/jellybeans.vim'
+Plugin 'ntpeters/vim-better-whitespace'
+" Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
-Plugin 'ack.vim'
-Plugin 'unimpaired.vim'
+Plugin 'tomasr/molokai'
+Plugin 'tpope/vim-unimpaired'
+Plugin 'vividchalk.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -31,6 +42,7 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
+let g:syntastic_ruby_checkers = ['rubocop']
 let g:syntastic_ruby_rubocop_args = "--rails"
 
 " When started as "evim", evim.vim will already have done these settings.
@@ -115,26 +127,13 @@ if !exists(":DiffOrig")
 		  \ | wincmd p | diffthis
 endif
 
-" Removes trailing space
-function! <SID>TrimWhiteSpace()
-  let l = line(".")
-  let c = col(".")
-	%s/\s\+$//e
-  call cursor(l, c)
-endfunction
-
-nnoremap <silent> <Leader>rts :call <SID>TrimWhiteSpace()<CR>
-
-autocmd FileWritePre * :call <SID>TrimWhiteSpace()
-autocmd FileAppendPre * :call <SID>TrimWhiteSpace()
-autocmd FilterWritePre * :call <SID>TrimWhiteSpace()
-autocmd BufWritePre * :call <SID>TrimWhiteSpace()
-
-" Enable soft tabs
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 set expandtab
+set number
+set wrap
 
-" Select colour scheme
-colorscheme delek
+colorscheme railscasts
+
+highlight ExtraWhitespace ctermbg=red
