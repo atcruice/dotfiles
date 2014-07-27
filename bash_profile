@@ -1,4 +1,4 @@
-source ~/.profile
+[[ -s "$HOME/.bashrc" ]] && source ~/.bashrc
 
 # colours
 BLACK=$(tput setaf 0)
@@ -62,29 +62,6 @@ function exit_status() {
 
 # custom prompt
 PROMPT_COMMAND=exit_status
-
-# aliases
-alias ls="ls -A"
-alias lsl="ls -Alh"
-alias wgit="git rev-parse --show-toplevel"
-
-# alias ta='tmux attach -t'
-# alias ts='tmux new-session -s'
-# alias tl='tmux list-sessions'
-
-# exports
-export EDITOR='vim'
-export CLICOLOR=1
-export NUM_CPUS="sysctl  -n hw.ncpu 2>/dev/null || grep processor -c /proc/cpuinfo"
-export HOMEBREW_GITHUB_API_TOKEN="1d12e6e83d151cf9b4da173bbbb7f07d9f7ffb14" # improve brew github API access
-PATH="/usr/local/opt/ccache/libexec:$PATH" # ccache
-PATH="$PATH:/usr/local/mysql/bin"
-PATH="$PATH:/usr/local/mongodb/bin"
-PATH="$PATH:/usr/local/heroku/bin"
-PATH="$PATH:/Applications/Postgres.app/Contents/Versions/9.3/bin"
-PATH="/usr/local/bin:/usr/local/sbin:$PATH" # TODO: find origin of duplicate augmentation
-PATH="$HOME/.cabal/bin:$PATH"
-export PATH
 
 eval "$(direnv hook $0)"
 

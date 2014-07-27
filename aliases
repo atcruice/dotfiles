@@ -1,0 +1,7 @@
+alias ls="ls -A"
+alias lsl="ls -Alh"
+alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
+alias ta='tmux attach -t'
+alias tl='tmux list-sessions'
+alias ts='tmux new-session -s'
+alias wgit="git rev-parse --show-toplevel"

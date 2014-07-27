@@ -1,0 +1,29 @@
+fresh freshshell/fresh bin/fresh --bin # handles updating fresh
+fresh aliases
+fresh andschwa/shell .path_edit.sh # clean PATH manipulation functions
+fresh path
+fresh vars
+fresh bash_profile --file
+fresh clang-format --file
+fresh gitconfig --file
+fresh gitignore --file
+fresh jrubyrc --file
+fresh rubocop.yml --file
+fresh rvmrc --file
+fresh tmux.conf --file
+fresh vimrc --file
+fresh foobacca/dotfiles bash/completion
+fresh foobacca/dotfiles shell/tmux
+fresh freshshell/fresh contrib/completion/fresh-completion.bash
+fresh jasoncodes/dotfiles config/ackrc --file
+fresh jasoncodes/dotfiles config/gemrc --file
+fresh jasoncodes/dotfiles config/gitconfig --file
+fresh jasoncodes/dotfiles config/inputrc --file
+fresh jasoncodes/dotfiles config/irbrc --file
+fresh jasoncodes/dotfiles config/pryrc --file
+fresh jasoncodes/dotfiles config/psqlrc --file
+fresh jasoncodes/dotfiles config/sqliterc --file
+fresh jasoncodes/dotfiles config/tmux.conf --file
+fresh jasoncodes/dotfiles shell/aliases/git.sh
+fresh jasoncodes/dotfiles shell/aliases/rails.sh
+fresh jasoncodes/dotfiles shell/aliases/ruby.sh # bundle exec everything
