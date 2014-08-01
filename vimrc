@@ -1,31 +1,43 @@
 " Use Vim settings, rather than Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
-set nocompatible              " be iMproved, required
-filetype off                  " required
+set nocompatible " be iMproved, required
+filetype off " required
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
+" Plugin 'EasyMotion'
+" Plugin 'altercation/vim-colors-solarized'
+" Plugin 'bronson/vim-trailing-whitespace'
+" Plugin 'bufexplorer.zip'
+" Plugin 'bufkill.vim'
+" Plugin 'jlanzarotta/bufexplorer'
+" Plugin 'jpo/vim-railscasts-theme'
+" Plugin 'tomasr/molokai'
+" Plugin 'upAndDown'
+" Plugin 'vividchalk.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'chreekat/vim-paren-crosshairs'
 Plugin 'ervandew/supertab'
 Plugin 'jeetsukumaran/vim-buffergator'
-Plugin 'jpo/vim-railscasts-theme'
-" Plugin 'kien/ctrlp.vim'
+Plugin 'kien/ctrlp.vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'nanotech/jellybeans.vim'
+Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'ntpeters/vim-better-whitespace'
-" Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
-Plugin 'tomasr/molokai'
+Plugin 'tomtom/tcomment_vim'
+Plugin 'tpope/vim-eunuch'
+Plugin 'tpope/vim-haml'
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-unimpaired'
-Plugin 'vividchalk.vim'
+Plugin 'wincent/Command-T'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -39,16 +51,53 @@ filetype plugin indent on    " required
 " :PluginSearch foo - searches for foo; append `!` to refresh local cache
 " :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
 
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
+let g:surround_35   = "#{\r}" " #
+let g:surround_40   = "(\r)"  " (
+let g:surround_41   = "(\r)"  " )
+let g:surround_123  = "{\r}"  " {
+let g:surround_125  = "{\r}"  " }
+let g:surround_91   = "[\r]"  " [
+let g:surround_93   = "[\r]"  " ]
 
 let g:syntastic_ruby_checkers = ['rubocop']
 let g:syntastic_ruby_rubocop_args = "--rails"
+nmap <Leader>c :SyntasticCheck<CR>
+hi SignColumn ctermbg=232
 
-" When started as "evim", evim.vim will already have done these settings.
-if v:progname =~? "evim"
-  finish
+" Switch syntax highlighting on, when the terminal has colors
+" Also switch on highlighting the last used search pattern.
+if &t_Co > 2 || has("gui_running")
+  syntax enable
+  set background=dark
+  " let g:solarized_termcolors=256
+  " colorscheme solarized
+  colorscheme jellybeans
+  set hlsearch
 endif
+
+" let g:indent_guides_auto_colors = 0
+" hi IndentGuidesOdd ctermbg=darkgray
+" hi IndentGuidesEven ctermbg=grey
+let g:indent_guides_enable_on_vim_startup = 1
+
+" NERDTree
+if has("autocmd")
+  autocmd StdinReadPre * let s:std_in=1
+  autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+  autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+endif
+
+let g:loaded_netrw = 1            " Disable netrw
+let g:loaded_netrwPlugin = 1      " Disable netrw
+let g:NERDTreeHijackNetrw = 0
+let g:NERDTreeShowLineNumbers = 0 " Disable line numbers
+let g:NERDTreeMinimalUI = 1       " Disable help message
+let g:NERDTreeDirArrows = 1       " Enable directory arrows
+let g:NERDTreeWinPos = 'right'
+nmap <Leader>n :NERDTreeToggle<CR>
+
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
@@ -63,9 +112,6 @@ set ruler		" show the cursor position all the time
 set showcmd		" display incomplete commands
 set incsearch		" do incremental searching
 
-" For Win32 GUI: remove 't' flag from 'guioptions': no tearoff menu entries
-" let &guioptions = substitute(&guioptions, "t", "", "g")
-
 " Don't use Ex mode, use Q for formatting
 map Q gq
 
@@ -78,16 +124,8 @@ if has('mouse')
   set mouse=a
 endif
 
-" Switch syntax highlighting on, when the terminal has colors
-" Also switch on highlighting the last used search pattern.
-if &t_Co > 2 || has("gui_running")
-  syntax on
-  set hlsearch
-endif
-
 " Only do this part when compiled with support for autocommands.
 if has("autocmd")
-
   " Enable file type detection.
   " Use the default filetype settings, so that mail gets 'tw' set to 72,
   " 'cindent' is on in C files, etc.
@@ -99,7 +137,7 @@ if has("autocmd")
   au!
 
   " For all text files set 'textwidth' to 78 characters.
-  autocmd FileType text setlocal textwidth=78
+  " autocmd FileType text setlocal textwidth=78
 
   " When editing a file, always jump to the last known cursor position.
   " Don't do it when the position is invalid or when inside an event handler
@@ -110,21 +148,9 @@ if has("autocmd")
     \ if line("'\"") > 1 && line("'\"") <= line("$") |
     \   exe "normal! g`\"" |
     \ endif
-
   augroup END
-
 else
-
   set autoindent		" always set autoindenting on
-
-endif " has("autocmd")
-
-" Convenient command to see the difference between the current buffer and the
-" file it was loaded from, thus the changes you made.
-" Only define it when not defined already.
-if !exists(":DiffOrig")
-  command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
-		  \ | wincmd p | diffthis
 endif
 
 set tabstop=2
@@ -133,7 +159,12 @@ set shiftwidth=2
 set expandtab
 set number
 set wrap
-
-colorscheme railscasts
-
-highlight ExtraWhitespace ctermbg=red
+set cursorline
+set ignorecase
+set smartcase
+set ttyfast
+set autoread
+let mapleader = ","
+hi Search ctermbg=red ctermfg=white
+nnoremap <C-L> :nohlsearch<CR><C-L>
+nmap <Leader>r dwi
