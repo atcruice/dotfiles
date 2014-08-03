@@ -2,6 +2,7 @@
 " This must be first, because it changes other options as a side effect.
 set nocompatible " be iMproved, required
 filetype off " required
+let mapleader = ","
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -59,10 +60,15 @@ let g:surround_125  = "{\r}"  " }
 let g:surround_91   = "[\r]"  " [
 let g:surround_93   = "[\r]"  " ]
 
-let g:syntastic_ruby_checkers = ['rubocop']
+let g:syntastic_check_on_open=1
+let g:syntastic_enable_signs=1
+let g:syntastic_error_symbol = "*"
+let g:syntastic_style_error_symbol = "*"
+let g:syntastic_warning_symbol = "•"
+let g:syntastic_style_warning_symbol = "•"
+let g:syntastic_ruby_checkers = ['mri', 'rubocop']
 let g:syntastic_ruby_rubocop_args = "--rails"
-nmap <Leader>c :SyntasticCheck<CR>
-hi SignColumn ctermbg=232
+" hi SignColumn ctermbg=232
 
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
@@ -164,7 +170,7 @@ set ignorecase
 set smartcase
 set ttyfast
 set autoread
-let mapleader = ","
 hi Search ctermbg=red ctermfg=white
 nnoremap <C-L> :nohlsearch<CR><C-L>
 nmap <Leader>r dwi
+
