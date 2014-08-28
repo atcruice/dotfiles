@@ -1,3 +1,6 @@
+scriptencoding utf-8
+set encoding=utf-8
+
 " Use Vim settings, rather than Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
 set nocompatible " be iMproved, required
@@ -12,7 +15,6 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 " Plugin 'EasyMotion'
-" Plugin 'altercation/vim-colors-solarized'
 " Plugin 'bronson/vim-trailing-whitespace'
 " Plugin 'bufexplorer.zip'
 " Plugin 'bufkill.vim'
@@ -23,8 +25,12 @@ Plugin 'gmarik/Vundle.vim'
 " Plugin 'vividchalk.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'chreekat/vim-paren-crosshairs'
+Plugin 'digitaltoad/vim-jade'
 Plugin 'ervandew/supertab'
+Plugin 'itchyny/lightline.vim'
+Plugin 'jasoncodes/ctrlp-modified.vim'
 Plugin 'jeetsukumaran/vim-buffergator'
+Plugin 'kchmck/vim-coffee-script'
 Plugin 'kien/ctrlp.vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'nanotech/jellybeans.vim'
@@ -52,6 +58,9 @@ filetype plugin indent on    " required
 " :PluginSearch foo - searches for foo; append `!` to refresh local cache
 " :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
 
+set noshowmode
+set laststatus=2
+
 let g:surround_35   = "#{\r}" " #
 let g:surround_40   = "(\r)"  " (
 let g:surround_41   = "(\r)"  " )
@@ -75,23 +84,15 @@ let g:syntastic_ruby_rubocop_args = "--rails"
 if &t_Co > 2 || has("gui_running")
   syntax enable
   set background=dark
-  " let g:solarized_termcolors=256
-  " colorscheme solarized
   colorscheme jellybeans
   set hlsearch
 endif
 
-" let g:indent_guides_auto_colors = 0
-" hi IndentGuidesOdd ctermbg=darkgray
-" hi IndentGuidesEven ctermbg=grey
 let g:indent_guides_enable_on_vim_startup = 1
 
 " NERDTree
-if has("autocmd")
-  autocmd StdinReadPre * let s:std_in=1
-  autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-  autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-endif
+noremap <Leader>. :NERDTreeToggle<CR>
+noremap <Leader>n :NERDTreeFind<CR>
 
 let g:loaded_netrw = 1            " Disable netrw
 let g:loaded_netrwPlugin = 1      " Disable netrw
@@ -100,7 +101,6 @@ let g:NERDTreeShowLineNumbers = 0 " Disable line numbers
 let g:NERDTreeMinimalUI = 1       " Disable help message
 let g:NERDTreeDirArrows = 1       " Enable directory arrows
 let g:NERDTreeWinPos = 'right'
-nmap <Leader>n :NERDTreeToggle<CR>
 
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
@@ -108,11 +108,8 @@ nmap <Leader>n :NERDTreeToggle<CR>
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
-" if has("vms")
-  set nobackup		" do not keep a backup file, use versions instead
-" else
-"   set backup		" keep a backup file
-" endif
+set nobackup		" do not keep a backup file, use versions instead
+set noswapfile
 set history=50		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
 set showcmd		" display incomplete commands
@@ -170,7 +167,41 @@ set ignorecase
 set smartcase
 set ttyfast
 set autoread
+set hidden
+set scrolloff=2
+set guifont=Ubuntu\ Mono\ derivative\ Powerline:h18
 hi Search ctermbg=red ctermfg=white
-nnoremap <C-L> :nohlsearch<CR><C-L>
+nnoremap <Leader>/ :nohlsearch<CR><C-L>
 nmap <Leader>r dwi
-
+" Close quickfix window
+map <Leader>k :ccl<CR>
+" Yank and put system pasteboard with <Leader>y/p
+noremap <Leader>y "*y
+nnoremap <Leader>yy "*yy
+noremap <Leader>p "*p
+noremap <Leader>P "*P
+" Select all
+map <Leader>a ggVG
+" Highlight word at cursor without changing position
+nnoremap <Leader>h *<C-O>
+" Jump to start and end of line using the home row keys
+noremap H ^
+noremap L $
+"Insert binding.pry on the current line
+map <Leader>bi Obinding.pry<Esc>
+" Easy window navigation
+noremap <C-h> <C-w>h
+noremap <C-j> <C-w>j
+noremap <C-k> <C-w>k
+noremap <C-l> <C-w>l
+" Movement & wrapped long lines
+" This solves the problem that pressing down jumps your cursor 'over' the current line to the next line
+nnoremap j gj
+nnoremap k gk
+" ack
+nnoremap <Leader>H *<C-O>:AckFromSearch!<CR>
+nmap <Leader>f :Ack!<Space>
+nmap <Leader>F :AckFromSearch!<CR>
+" ctrlp-modified
+map <Leader>m :CtrlPModified<CR>
+map <Leader>M :CtrlPBranch<CR>

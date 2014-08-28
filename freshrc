@@ -8,6 +8,7 @@ fresh bash_profile --file
 fresh clang-format --file
 fresh gitconfig --file
 fresh gitignore --file
+fresh inputrc --file
 fresh jrubyrc --file
 fresh rubocop.yml --file
 fresh rvmrc --file

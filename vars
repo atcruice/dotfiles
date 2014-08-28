@@ -2,3 +2,9 @@ export CLICOLOR=1
 export EDITOR='vim -f'
 # improve ccache performance
 export NUM_CPUS="$(sysctl  -n hw.ncpu 2>/dev/null || grep processor -c /proc/cpuinfo)"
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+export HISTCONTROL=ignoreboth:erasedups
+export HISTIGNORE='ls:bg:gf:history'
+
+shopt -s autocd cdspell checkjobs dirspell histappend no_empty_cmd_completion
+
