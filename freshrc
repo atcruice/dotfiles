@@ -13,6 +13,7 @@ fresh jshintrc --file
 fresh rubocop.yml --file
 fresh rvmrc --file
 fresh tmux.conf --file
+fresh pivotal/tmux-config tmux.conf --file
 fresh vimrc --file
 fresh foobacca/dotfiles shell/tmux
 fresh freshshell/fresh contrib/completion/fresh-completion.bash
