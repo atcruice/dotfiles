@@ -6,5 +6,5 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 export HISTCONTROL=ignoreboth:erasedups
 export HISTIGNORE='ls:bg:gf:history'
 
-shopt -s autocd cdspell checkjobs dirspell histappend no_empty_cmd_completion
+shopt -s cdspell histappend no_empty_cmd_completion
 
