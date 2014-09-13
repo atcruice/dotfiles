@@ -1,4 +1,4 @@
-path_front "$HOME/.cabal/bin" "/usr/local/bin" "/usr/local/sbin" "/usr/local/opt/ccache/libexec"
+path_front "$HOME/.cabal/bin" "/usr/local/bin" "/usr/local/sbin"
 
 path_back "/usr/local/mysql/bin" "/usr/local/mongodb/bin" "/usr/local/heroku/bin" "/Applications/Postgres.app/Contents/Versions/9.3/bin"
 
