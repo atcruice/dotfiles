@@ -30,4 +30,5 @@ fresh jasoncodes/dotfiles config/tmux.conf --file
 fresh jasoncodes/dotfiles shell/aliases/git.sh
 fresh jasoncodes/dotfiles shell/aliases/rails.sh
 fresh jasoncodes/dotfiles shell/aliases/ruby.sh # bundle exec everything
+fresh jasoncodes/dotfiles vim/config/tags.vim --file=~/.vimrc
 fresh jasoncodes/dotfiles bin/chruby-exec-all --bin
