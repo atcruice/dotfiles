@@ -31,7 +31,5 @@ ehthumbs.db
 Thumbs.db
 
 # My additions
-*~
 .envrc
-*.swp
 node_modules/
