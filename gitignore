@@ -35,6 +35,5 @@ Thumbs.db
 *.sublime-workspace
 *~
 .envrc
-.ruby-gemset
 *.swp
 node_modules/
