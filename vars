@@ -2,7 +2,7 @@ export CLICOLOR=1
 export EDITOR='vim -f'
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 export HISTCONTROL=ignoreboth:erasedups
-export HISTIGNORE='ls:bg:gf:history'
+export HISTIGNORE='ls:lsl:bg:gf:history:exit'
 
 shopt -s cdspell histappend no_empty_cmd_completion
 
