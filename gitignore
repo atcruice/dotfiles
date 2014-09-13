@@ -31,8 +31,6 @@ ehthumbs.db
 Thumbs.db
 
 # My additions
-*.sublime-project
-*.sublime-workspace
 *~
 .envrc
 *.swp
