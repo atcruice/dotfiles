@@ -1,4 +1,7 @@
+# vim: set ft=sh:
+
 fresh freshshell/fresh bin/fresh --bin # handles updating fresh
+fresh bashrc --file
 fresh aliases
 fresh andschwa/shell .path_edit.sh # clean PATH manipulation functions
 fresh path
