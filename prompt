@@ -47,11 +47,11 @@ function user_host {
   local user=""
   local host=""
 
-  if [[ $(whoami) != "alexc" ]]; then
+  if [[ $(whoami) != "alexcruice" ]]; then
     user="\u"
   fi
 
-  if [[ "$(hostname -s)" != "macbook" ]]; then
+  if [[ "$(hostname -s)" != "alexs-mbp" ]]; then
     host="@\h"
   fi
 
