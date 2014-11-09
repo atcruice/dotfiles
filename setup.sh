@@ -103,6 +103,10 @@ inform 'Installing wget'
 brew install wget
 inform 'Installing sassc'
 brew install sassc
+inform 'Installing heroku-toolbelt'
+brew install heroku-toolbelt
+heroku login
+heroku keys:add
 
 inform 'Installing Dropbox'
 brew cask install dropbox
