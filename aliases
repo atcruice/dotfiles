@@ -1,5 +1,4 @@
 alias ls="ls -A"
 alias lsl="ls -Alh"
-alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 alias wgit="git rev-parse --show-toplevel"
 alias fastcop='git diff --name-only origin/develop | grep \\.rb$ | xargs ls 2>/dev/null | xargs rubocop --config .hound.yml --force-exclusion'
