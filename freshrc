@@ -14,7 +14,6 @@ fresh gitignore --file
 fresh inputrc --file
 fresh jshintrc --file
 fresh rubocop.yml --file
-fresh vimrc --file
 fresh freshshell/fresh contrib/completion/fresh-completion.bash
 fresh hackling/morse bin/morse --bin
 fresh jasoncodes/dotfiles config/ackrc --file
@@ -28,7 +27,22 @@ fresh jasoncodes/dotfiles config/sqliterc --file
 fresh jasoncodes/dotfiles shell/aliases/git.sh
 fresh jasoncodes/dotfiles shell/aliases/rails.sh
 fresh jasoncodes/dotfiles shell/aliases/ruby.sh # bundle exec everything
-fresh jasoncodes/dotfiles vim/config/tags.vim --file=~/.vimrc
 fresh rupa/z z.sh
 fresh jasoncodes/dotfiles bin/chruby-exec-all --bin
 fresh twe4ked/dotfiles bin/heroku-remote-add --bin
+
+fresh-options --file=~/.vimrc
+  fresh vim/encoding.vim
+  fresh vim/mapleader.vim
+  fresh vim/vundle_header.vim
+  fresh vim/plugins/\*.vim
+  fresh jasoncodes/dotfiles vim/config/tags.vim
+  fresh vim/vundle_footer.vim
+  fresh vim/settings.vim
+  fresh vim/mappings.vim
+fresh-options
+
+
+fresh_after_build() {
+  vim +PluginInstall +PluginClean +qall
+}

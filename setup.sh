@@ -203,12 +203,12 @@ inform 'Installing Ruby 1.9.3'
 ruby-install ruby 1.9.3
 inform 'Installing Ruby 2.0.0'
 ruby-install ruby 2.0.0
-inform 'Installing Ruby 2.1.1'
-ruby-install ruby 2.1.1
 inform 'Installing Ruby 2.1.2'
 ruby-install ruby 2.1.2
 inform 'Installing Ruby 2.1.3'
 ruby-install ruby 2.1.3
+inform 'Installing Ruby 2.1.4'
+ruby-install ruby 2.1.4
 
 inform 'Installing PostgreSQL'
 brew install postgres
