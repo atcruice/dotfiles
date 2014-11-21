@@ -15,7 +15,7 @@ set ignorecase
 set incsearch
 set linebreak
 set matchtime=2
-set mouse= " disable mouse
+set mouse=a
 set noequalalways
 set nolist
 set nostartofline
