@@ -36,7 +36,7 @@ nnoremap <silent><Leader>cf :let @*=expand('%')<CR>
 " Copy relative path and line number to the system pasteboard
 nnoremap <silent><Leader>cl :let @*=expand('%').':'.line('.')<CR>
 " quick mapping to execute the macro in q
-map Q @q
+noremap <Leader>q @q
 " fast save
 nnoremap <Leader>w :w<CR>
 " fast buffer close
