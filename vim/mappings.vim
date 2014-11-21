@@ -41,3 +41,9 @@ noremap <Leader>q @q
 nnoremap <Leader>w :w<CR>
 " fast buffer close
 nnoremap <Leader>x :bw<Cr>
+" sort selection
+vnoremap <Leader>s :sort<CR>
+" jump to end of paste
+vnoremap y y`]
+vnoremap p p`]
+nnoremap p p`]
