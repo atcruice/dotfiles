@@ -32,15 +32,15 @@ noremap <Leader>Y "*y$
 noremap <Leader>p "*p
 noremap <Leader>y "*y
 " Copy relative path to the system pasteboard
-nnoremap <silent><Leader>cf :let @*=expand('%')<CR>
+nnoremap <Leader>cf :let @*=expand('%')<CR>
 " Copy relative path and line number to the system pasteboard
-nnoremap <silent><Leader>cl :let @*=expand('%').':'.line('.')<CR>
+nnoremap <Leader>cl :let @*=expand('%').':'.line('.')<CR>
 " quick mapping to execute the macro in q
 noremap <Leader>q @q
 " fast save
 nnoremap <Leader>w :w<CR>
 " fast buffer close
-nnoremap <Leader>x :bw<Cr>
+nnoremap <Leader>x :bw<CR>
 " sort selection
 vnoremap <Leader>s :sort<CR>
 " jump to end of paste
