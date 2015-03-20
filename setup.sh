@@ -193,6 +193,8 @@ inform 'Installing QuickTime 7'
 brew cask install quicktime-player7
 inform 'Installing Videobox'
 brew cask install videobox
+inform 'Installing Bittorrent Sync'
+brew cask install bittorrent-sync
 
 
 inform 'Installing chruby'
