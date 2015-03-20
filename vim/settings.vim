@@ -14,7 +14,6 @@ set hlsearch
 set ignorecase
 set incsearch
 set linebreak
-set matchtime=2
 set mouse=a
 set noequalalways
 set nolist
@@ -26,7 +25,6 @@ set scrolloff=3
 set shiftwidth=2
 set shortmess+=I
 set showcmd
-set showmatch
 set smartcase
 set smarttab
 set softtabstop=2
