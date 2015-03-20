@@ -44,5 +44,11 @@ fresh-options
 
 
 fresh_after_build() {
-  vim +PluginInstall +PluginClean +qall
+  read -p 'Quick fresh? (y/n): ' answer
+
+  if [ "$answer" = 'y' ]; then
+    vim +PluginInstall +PluginClean +qall
+  else
+    vim +PluginInstall! +PluginClean! +qall
+  fi
 }
