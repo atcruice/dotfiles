@@ -42,6 +42,7 @@ fresh-options --file=~/.vimrc
   fresh vim/mappings.vim
 fresh-options
 
+fresh jasoncodes/dotfiles vim/plugins/ctrlp.vim --file=~/.vimrc
 
 fresh_after_build() {
   read -p 'Quick fresh? (y/n): ' answer
