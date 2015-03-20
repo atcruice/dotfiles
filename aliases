@@ -1,4 +1,4 @@
-alias ls="ls -A"
-alias lsl="ls -Alh"
+alias ls="ls -1"
+alias lsl="ls -hl"
 alias wgit="git rev-parse --show-toplevel"
 alias fastcop='git diff --name-only origin/develop | grep \\.rb$ | xargs ls 2>/dev/null | xargs rubocop --config .hound.yml --force-exclusion'
