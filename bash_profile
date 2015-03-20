@@ -1,4 +1,5 @@
 # vim: set ft=sh:
+stty -ixon
 
 function output_warning
 {
