@@ -16,6 +16,8 @@ fresh jshintrc --file
 fresh rubocop.yml --file
 fresh freshshell/fresh contrib/completion/fresh-completion.bash
 fresh hackling/morse bin/morse --bin
+fresh jasoncodes/dotfiles bin/adduser --bin
+fresh jasoncodes/dotfiles bin/wemux/\* --bin
 fresh jasoncodes/dotfiles config/ackrc --file
 fresh jasoncodes/dotfiles config/gemrc --file
 fresh jasoncodes/dotfiles config/gitconfig --file
@@ -24,6 +26,7 @@ fresh jasoncodes/dotfiles config/irbrc --file
 fresh jasoncodes/dotfiles config/pryrc --file
 fresh jasoncodes/dotfiles config/psqlrc --file
 fresh jasoncodes/dotfiles config/sqliterc --file
+fresh jasoncodes/dotfiles config/tmux.conf --file
 fresh jasoncodes/dotfiles shell/aliases/git.sh
 fresh jasoncodes/dotfiles shell/aliases/rails.sh
 fresh jasoncodes/dotfiles shell/aliases/ruby.sh # bundle exec everything
