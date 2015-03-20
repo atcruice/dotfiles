@@ -11,7 +11,7 @@ fresh bash_profile --file
 fresh clang-format --file
 fresh gitconfig --file
 fresh gitignore --file
-fresh inputrc --file
+# fresh inputrc --file
 fresh jshintrc --file
 fresh rubocop.yml --file
 fresh freshshell/fresh contrib/completion/fresh-completion.bash
