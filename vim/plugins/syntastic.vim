@@ -9,4 +9,7 @@ let g:syntastic_style_warning_symbol = "•"
 let g:syntastic_ruby_checkers = ['mri', 'rubocop']
 let g:syntastic_ruby_rubocop_args = "--rails"
 let g:syntastic_mode_map = { "mode": "active", "passive_filetypes": ["ruby"] }
+let g:syntastic_c_check_header = 1
+let g:syntastic_c_auto_refresh_includes = 1
+let g:syntastic_c_compiler_options = '-std=c11 -Wall -Wextra -Wwrite-strings -pedantic'
 nmap <Leader>sc :SyntasticCheck<CR>
