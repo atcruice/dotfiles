@@ -14,6 +14,7 @@ fresh gitignore --file
 # fresh inputrc --file
 fresh jshintrc --file
 fresh rubocop.yml --file
+fresh tmux.conf --file
 fresh freshshell/fresh contrib/completion/fresh-completion.bash
 fresh hackling/morse bin/morse --bin
 fresh jasoncodes/dotfiles bin/adduser --bin
@@ -33,6 +34,7 @@ fresh jasoncodes/dotfiles shell/aliases/ruby.sh # bundle exec everything
 fresh rupa/z z.sh
 fresh jasoncodes/dotfiles bin/chruby-exec-all --bin
 fresh twe4ked/dotfiles bin/heroku-remote-add --bin
+fresh jamesottaway/tmux-up tmux-up --bin
 
 fresh-options --file=~/.vimrc
   fresh vim/encoding.vim
