@@ -11,7 +11,6 @@ fresh bash_profile --file
 fresh clang-format --file
 fresh gitconfig --file
 fresh gitignore --file
-# fresh inputrc --file
 fresh jshintrc --file
 fresh rubocop.yml --file
 fresh tmux.conf --file
@@ -22,7 +21,6 @@ fresh jasoncodes/dotfiles bin/wemux/\* --bin
 fresh jasoncodes/dotfiles config/ackrc --file
 fresh jasoncodes/dotfiles config/gemrc --file
 fresh jasoncodes/dotfiles config/gitconfig --file
-fresh jasoncodes/dotfiles config/inputrc --file
 fresh jasoncodes/dotfiles config/irbrc --file
 fresh jasoncodes/dotfiles config/pryrc --file
 fresh jasoncodes/dotfiles config/psqlrc --file
@@ -36,6 +34,8 @@ fresh jasoncodes/dotfiles bin/chruby-exec-all --bin
 fresh twe4ked/dotfiles bin/heroku-remote-add --bin
 fresh jamesottaway/tmux-up tmux-up --bin
 fresh altercation/solarized iterm2-colors-solarized --file=iterm2-colors-solarized/
+
+fresh config/\* --file
 
 fresh-options --file=~/.vimrc
   fresh vim/encoding.vim
