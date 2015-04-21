@@ -26,11 +26,11 @@ nnoremap <Leader>h *<C-O>
 " Yank from the cursor to the end of the line, to be consistent with C and D
 nnoremap Y y$
 " Yank and put system pasteboard with <Leader>y/p.
-nnoremap <Leader>yy "*yy
+nnoremap <Leader>yy ma^"*y$`a
 noremap <Leader>P "*P
 noremap <Leader>Y "*y$
 noremap <Leader>p "*p
-noremap <Leader>y "*y
+vnoremap <Leader>y "*y
 " Copy relative path to the system pasteboard
 nnoremap <Leader>cf :let @*=expand('%')<CR>
 " Copy relative path and line number to the system pasteboard
