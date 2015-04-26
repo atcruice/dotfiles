@@ -199,6 +199,8 @@ inform 'Installing Videobox'
 brew cask install videobox
 inform 'Installing Bittorrent Sync'
 brew cask install bittorrent-sync
+inform 'Installing f.lux'
+brew cask install flux
 
 
 inform 'Installing chruby'
