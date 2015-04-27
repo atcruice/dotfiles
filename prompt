@@ -47,11 +47,11 @@ function user_host {
   local user=""
   local host=""
 
-  if [[ $(whoami) != "alexcruice" ]]; then
+  if [[ "$(id -un)" != "alexcruice" ]]; then
     user="\u"
   fi
 
-  if [[ "$(hostname -s)" != "alexs-mbp" ]]; then
+  if [[ "$(hostname -s)" != "$(scutil --get ComputerName)" ]]; then
     host="@\h"
   fi
 
