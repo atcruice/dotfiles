@@ -1,13 +1,15 @@
 # vim: set ft=sh:
 
 fresh freshshell/fresh bin/fresh --bin # handles updating fresh
+
 fresh bashrc --file
 fresh aliases
 fresh andschwa/shell .shell/path-edit.sh # clean PATH manipulation functions
 fresh path
 fresh prompt
 fresh vars
-fresh bash_profile --file
+
+fresh bash_profile.sh --file=~/.bash_profile
 fresh clang-format --file
 fresh gitconfig --file
 fresh gitignore --file
