@@ -30,7 +30,8 @@
 ehthumbs.db
 Thumbs.db
 
-# My additions
+# direnv
+.direnv
 .envrc
 
 # tmux-up

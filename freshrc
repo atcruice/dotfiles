@@ -4,6 +4,7 @@ fresh freshshell/fresh bin/fresh --bin # handles updating fresh
 
 fresh bashrc --file
 fresh aliases
+fresh functions.sh
 fresh andschwa/shell .shell/path-edit.sh # clean PATH manipulation functions
 fresh path
 fresh prompt.sh
@@ -11,6 +12,7 @@ fresh vars
 
 fresh bash_profile.sh --file=~/.bash_profile
 fresh clang-format --file
+fresh direnvrc.sh --file=~/.direnvrc
 fresh gitconfig --file
 fresh gitignore --file
 fresh jshintrc --file
@@ -49,6 +51,7 @@ fresh-options --file=~/.vimrc
   fresh vim/vundle_footer.vim
   fresh vim/settings.vim
   fresh vim/mappings.vim
+  fresh vim/direnv.vim
 fresh-options
 
 fresh jasoncodes/dotfiles vim/plugins/ctrlp.vim --file=~/.vimrc

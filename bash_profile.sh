@@ -10,6 +10,6 @@ source_this() {
   { [[ -r $file_to_source ]] && source "$file_to_source"; } || output_warning "$failure_message"
 }
 
-eval "$(direnv hook $0)"
 source_this "$HOME/.bashrc" "$HOME/.bashrc not found"
 source_this "$(brew --prefix)/etc/bash_completion" 'bash-completion not found'
+eval "$(direnv hook bash)"
