@@ -103,6 +103,8 @@ inform 'Installing heroku-toolbelt'
 brew install heroku-toolbelt
 heroku login
 heroku keys:add
+inform 'Installing ncdu'
+brew install ncdu
 
 inform 'Installing Dropbox'
 brew cask install dropbox
