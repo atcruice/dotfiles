@@ -40,6 +40,9 @@ setup_ssh
 inform 'Installing fresh (will git-clone dotfiles, may prompt to install command line dev tools)'
 FRESH_LOCAL_SOURCE=alexcruice/dotfiles bash <(curl -L get.freshshell.com)
 
+inform 'Installing nix'
+bash <(curl https://nixos.org/nix/install)
+
 inform 'Installing Homebrew'
 ruby -e "$(curl -L https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew doctor

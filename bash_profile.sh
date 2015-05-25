@@ -12,4 +12,5 @@ source_this() {
 
 source_this "$HOME/.bashrc" "$HOME/.bashrc not found"
 source_this "$(brew --prefix)/etc/bash_completion" 'bash-completion not found'
+source_this "$HOME/.nix-profile/etc/profile.d/nix.sh" 'nix failed to set up'
 eval "$(direnv hook bash)"
