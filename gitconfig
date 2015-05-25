@@ -1,3 +1,5 @@
 [user]
 	name = Alex Cruice
 	email = alex.cruice@gmail.com
+[core]
+  pager = diff-highlight | less --tabs=2

@@ -36,6 +36,7 @@ fresh jasoncodes/dotfiles bin/chruby-exec-all --bin
 fresh twe4ked/dotfiles bin/heroku-remote-add --bin
 fresh jamesottaway/tmux-up tmux-up --bin
 fresh altercation/solarized iterm2-colors-solarized --file=iterm2-colors-solarized/
+fresh git/git contrib/diff-highlight/diff-highlight --bin
 
 fresh config/\* --file
 
