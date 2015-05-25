@@ -80,12 +80,6 @@ inform 'Installing mit-scheme'
 brew install mit-scheme
 inform 'Installing ntfs-3g'
 brew install ntfs-3g
-inform 'Installing nvm'
-brew install nvm
-source ~/.bashrc
-inform 'Installing node v0.10.28'
-nvm install v0.10.28
-nvm alias default 0.10.28
 inform 'Installing phantomjs'
 brew install phantomjs
 inform 'Installing shellcheck'

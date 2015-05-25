@@ -18,6 +18,5 @@
   "singleGroups": true,
   "undef": true,
   "unused": true,
-  "asi": true,
-  "node": true
+  "asi": true
 }
