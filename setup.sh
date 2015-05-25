@@ -110,7 +110,7 @@ inform 'Installing Dropbox'
 brew cask install dropbox
 open /Applications/Dropbox.app
 inform 'Installing 1Password'
-brew cask install onepassword
+brew cask install 1password
 open /Applications/1Password\ 4.app
 inform 'Installing Inkscape'
 brew cask install inkscape
