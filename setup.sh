@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # unofficial bash strict mode
 set -euo pipefail
 IFS=$'\n\t'
@@ -6,13 +6,11 @@ IFS=$'\n\t'
 # security precaution
 export PATH=/usr/bin:$PATH
 
-function inform
-{
+inform() {
   echo -e "\033[1m\033[33m==>\033[0m $*"
 }
 
-function setup_ssh
-{
+setup_ssh() {
   inform 'Generating SSH passphrase and storing in Mac OS X Keychain'
   local passphrase="$(openssl rand -base64 21)"
   local account_name="$(id -un)"
