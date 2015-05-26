@@ -81,8 +81,8 @@ inform 'Installing mit-scheme'
 brew install mit-scheme
 inform 'Installing ntfs-3g'
 brew install ntfs-3g
-inform 'Installing phantomjs'
-brew install phantomjs
+inform 'Installing phantomjs 1.9.8'
+brew install phantomjs198
 inform 'Installing shellcheck'
 brew install shellcheck
 inform 'Installing socat'
