@@ -5,7 +5,7 @@ fresh freshshell/fresh bin/fresh --bin # handles updating fresh
 fresh bashrc --file
 fresh functions.sh
 fresh andschwa/shell .shell/path-edit.sh # clean PATH manipulation functions
-fresh path
+fresh path.sh
 fresh prompt.sh
 fresh vars
 
