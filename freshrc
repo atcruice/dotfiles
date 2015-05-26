@@ -3,7 +3,6 @@
 fresh freshshell/fresh bin/fresh --bin # handles updating fresh
 
 fresh bashrc --file
-fresh aliases
 fresh functions.sh
 fresh andschwa/shell .shell/path-edit.sh # clean PATH manipulation functions
 fresh path
