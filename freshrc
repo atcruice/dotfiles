@@ -56,11 +56,11 @@ fresh-options
 fresh jasoncodes/dotfiles vim/plugins/ctrlp.vim --file=~/.vimrc
 
 fresh_after_build() {
-  read -p 'Quick fresh? (y/n): ' answer
+  read -p 'Update vim plugins? (y/n): ' answer
 
   if [ "$answer" = 'y' ]; then
-    vim +PluginInstall +PluginClean +qall
-  else
     vim +PluginInstall! +PluginClean! +qall
+  else
+    vim +PluginInstall +PluginClean +qall
   fi
 }
