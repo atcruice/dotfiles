@@ -2,25 +2,19 @@
 
 fresh freshshell/fresh bin/fresh --bin # handles updating fresh
 
-fresh bashrc --file
-fresh functions.sh
-fresh andschwa/shell .shell/path-edit.sh # clean PATH manipulation functions
-fresh path.sh
-fresh prompt.sh
-fresh vars
+fresh freshshell/fresh contrib/source-build.sh --file=~/.bash_profile
+fresh freshshell/fresh contrib/source-build.sh --file=~/.bashrc
 
-fresh bash_profile.sh --file=~/.bash_profile
-fresh clang-format --file
-fresh direnvrc.sh --file=~/.direnvrc
-fresh gitconfig --file
-fresh gitignore --file
-fresh jshintrc --file
-fresh rubocop.yml --file
-fresh tmux.conf --file
+fresh andschwa/shell .shell/path-edit.sh # clean PATH manipulation functions
+fresh bobthecow/git-flow-completion git-flow-completion.bash
 fresh freshshell/fresh contrib/completion/fresh-completion.bash
-fresh hackling/morse bin/morse --bin
-fresh jasoncodes/dotfiles bin/adduser --bin
-fresh jasoncodes/dotfiles bin/wemux/\* --bin
+fresh jasoncodes/dotfiles shell/aliases/git.sh
+fresh jasoncodes/dotfiles shell/aliases/rails.sh
+fresh jasoncodes/dotfiles shell/aliases/ruby.sh # bundle exec everything
+fresh rupa/z z.sh
+fresh shell/\*
+
+fresh altercation/solarized iterm2-colors-solarized --file=iterm2-colors-solarized/
 fresh jasoncodes/dotfiles config/ackrc --file
 fresh jasoncodes/dotfiles config/gemrc --file
 fresh jasoncodes/dotfiles config/gitconfig --file
@@ -29,38 +23,40 @@ fresh jasoncodes/dotfiles config/pryrc --file
 fresh jasoncodes/dotfiles config/psqlrc --file
 fresh jasoncodes/dotfiles config/sqliterc --file
 fresh jasoncodes/dotfiles config/tmux.conf --file
-fresh jasoncodes/dotfiles shell/aliases/git.sh
-fresh jasoncodes/dotfiles shell/aliases/rails.sh
-fresh jasoncodes/dotfiles shell/aliases/ruby.sh # bundle exec everything
-fresh rupa/z z.sh
-fresh jasoncodes/dotfiles bin/chruby-exec-all --bin
-fresh twe4ked/dotfiles bin/heroku-remote-add --bin
-fresh jamesottaway/tmux-up tmux-up --bin
-fresh altercation/solarized iterm2-colors-solarized --file=iterm2-colors-solarized/
-fresh git/git contrib/diff-highlight/diff-highlight --bin
-
 fresh config/\* --file
+
+fresh git/git contrib/diff-highlight/diff-highlight --bin
+fresh hackling/morse bin/morse --bin
+fresh jamesottaway/tmux-up tmux-up --bin
+fresh jasoncodes/dotfiles bin/adduser --bin
+fresh jasoncodes/dotfiles bin/chruby-exec-all --bin
+fresh jasoncodes/dotfiles bin/wemux/\* --bin
+fresh twe4ked/dotfiles bin/heroku-remote-add --bin
 
 fresh-options --file=~/.vimrc
   fresh vim/encoding.vim
   fresh vim/mapleader.vim
   fresh vim/vundle_header.vim
   fresh vim/plugins/\*.vim
-  fresh jasoncodes/dotfiles vim/config/tags.vim
+  fresh jasoncodes/dotfiles vim/plugins/ctrlp.vim
   fresh vim/vundle_footer.vim
+  fresh jasoncodes/dotfiles vim/config/tags.vim
   fresh vim/settings.vim
   fresh vim/mappings.vim
   fresh vim/direnv.vim
 fresh-options
 
-fresh jasoncodes/dotfiles vim/plugins/ctrlp.vim --file=~/.vimrc
+update_vundle_plugins() {
+  read -p 'Update vundle plugins? (y/n): ' answer
 
-fresh_after_build() {
-  read -p 'Update vim plugins? (y/n): ' answer
-
-  if [ "$answer" = 'y' ]; then
-    vim +PluginInstall! +PluginClean! +qall
+  if [[ "$answer" = 'y' ]]
+  then
+    vim +PluginUpdate +PluginClean! +qall
   else
     vim +PluginInstall +PluginClean +qall
   fi
+}
+
+fresh_after_build() {
+  update_vundle_plugins
 }

@@ -79,10 +79,12 @@ function git_info {
   git rev-parse --is-inside-work-tree &>/dev/null || return
 
   # quickest check for what branch we're on
-  local branch=$(git symbolic-ref -q HEAD | sed -e 's|^refs/heads/||')
+  local branch
+  branch=$(git symbolic-ref -q HEAD | sed -e 's|^refs/heads/||')
 
   # check if it's dirty (via github.com/sindresorhus/pure)
-  local dirty=$(git diff --quiet --ignore-submodules HEAD &>/dev/null; [ $? -eq 1 ]&& echo -e "*")
+  local dirty
+  dirty=$(git diff --quiet --ignore-submodules HEAD &>/dev/null; [ $? -eq 1 ]&& echo -e "*")
 
   echo "\[$FG_BLACK\]\[$BG_LIGHT_YELLOW\] $branch$dirty \[$RESET\]"
 }
