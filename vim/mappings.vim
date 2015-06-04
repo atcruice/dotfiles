@@ -47,3 +47,5 @@ vnoremap <Leader>s :sort<CR>
 vnoremap y y`]
 vnoremap p p`]
 nnoremap p p`]
+" search for visually selected text
+vnoremap // y/<C-R>"<CR>
