@@ -101,4 +101,4 @@ function custom_prompt {
   PS1="\`if [ \$? = 0 ]; then echo $(exit_good); else echo $(exit_bad); fi\`"
 }
 
-PROMPT_COMMAND="custom_prompt; $PROMPT_COMMAND"
+PROMPT_COMMAND="custom_prompt; history -a; $PROMPT_COMMAND"
