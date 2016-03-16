@@ -57,8 +57,9 @@ brew install chromedriver
 inform 'Installing cloudfoundry-cli'
 brew tap pivotal/tap
 brew install cloudfoundry-cli
-inform 'Installing ctags'
-brew install ctags
+inform 'Installing universal-ctags'
+brew tap universal-ctags/universal-ctags
+brew install --HEAD universal-ctags
 inform 'Installing direnv'
 brew install direnv
 inform 'Installing git'
