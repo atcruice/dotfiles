@@ -10,7 +10,6 @@ path_front '/usr/local/bin' '/usr/local/sbin'
 export PATH
 
 source_this "$(brew --prefix)/etc/bash_completion" 'bash-completion not found'
-source_this "$HOME/.nix-profile/etc/profile.d/nix.sh" 'nix failed to load'
 source_this '/usr/local/opt/chruby/share/chruby/chruby.sh' 'chruby failed to load'
 source_this '/usr/local/opt/chruby/share/chruby/auto.sh' 'chruby auto-loading failed to load'
 
