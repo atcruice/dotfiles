@@ -1,17 +1,20 @@
 syntax enable
 colorscheme jellybeans
 highlight Search ctermbg=red ctermfg=white
-set autoindent
+
 set autoread
 set autowriteall
 set backspace=indent,eol,start
-set cindent
+set breakindent
+set breakindentopt=shift:2
 set cursorline
 set expandtab
+set exrc
 set hidden
 set history=1000
 set hlsearch
 set ignorecase
+set includeexpr=substitute(v:fname,'\\.','/','g')
 set incsearch
 set linebreak
 set mouse=a
@@ -22,15 +25,18 @@ set noswapfile
 set number
 set ruler
 set scrolloff=3
-set shiftwidth=2
+set secure
+set shiftround
+set shiftwidth=4
 set shortmess+=I
 set showcmd
 set smartcase
+set smartindent
 set smarttab
-set softtabstop=2
 set spelllang=en_au
 set switchbuf=useopen
-set tabstop=2
+set tabstop=4
+set timeoutlen=1000 ttimeoutlen=0
 set title
 set ttyfast
 set wildmenu
@@ -41,4 +47,9 @@ set writebackup
 augroup c_headers
     autocmd!
     autocmd BufRead,BufNewFile *.h,*.c set filetype=c.doxygen
+augroup END
+
+augroup indent_two
+    autocmd!
+    autocmd Filetype ruby,java setlocal tabstop=2 shiftwidth=2
 augroup END
