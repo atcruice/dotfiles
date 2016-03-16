@@ -34,7 +34,7 @@ fresh-options --file=~/.vimrc
 fresh-options
 
 update_vundle_plugins() {
-  read -p 'Update vundle plugins? (y/n): ' answer
+  read -rp 'Update vundle plugins? (y/n): ' answer
 
   if [[ "$answer" = 'y' ]]
   then
