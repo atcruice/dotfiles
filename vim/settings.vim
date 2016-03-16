@@ -37,3 +37,8 @@ set wildmenu
 set wildmode=list:longest
 set wrap
 set writebackup
+
+augroup c_headers
+    autocmd!
+    autocmd BufRead,BufNewFile *.h,*.c set filetype=c.doxygen
+augroup END
