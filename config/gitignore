@@ -36,3 +36,6 @@ Thumbs.db
 
 # tmux-up
 .tmux.conf
+
+# personal dev environment
+.syntastic_javac_config
