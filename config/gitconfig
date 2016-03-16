@@ -5,3 +5,7 @@
 
 [core]
     pager = diff-highlight | less --tabs=2
+
+[alias]
+    s = status --untracked-files=all
+    l = log --oneline --decorate --graph
