@@ -1,6 +1,7 @@
 [user]
     name = Alex Cruice
     email = alex.cruice@gmail.com
+    signinkey = B9208755
 
 [core]
     pager = diff-highlight | less --tabs=2
