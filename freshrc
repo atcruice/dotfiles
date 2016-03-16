@@ -20,7 +20,6 @@ fresh git/git contrib/diff-highlight/diff-highlight --bin
 fresh jasoncodes/dotfiles bin/adduser --bin
 fresh jasoncodes/dotfiles bin/chruby-exec-all --bin
 fresh jasoncodes/dotfiles bin/wemux/\* --bin
-fresh twe4ked/dotfiles bin/heroku-remote-add --bin
 
 fresh-options --file=~/.vimrc
   fresh vim/encoding.vim
