@@ -10,9 +10,10 @@ let g:syntastic_style_warning_symbol = "•"
 let g:syntastic_ruby_checkers = ['rubocop', 'mri']
 let g:syntastic_ruby_rubocop_args = "--rails"
 
+let g:syntastic_c_compiler = 'gcc-4.4'
 let g:syntastic_c_check_header = 1
 let g:syntastic_c_auto_refresh_includes = 1
-let g:syntastic_c_compiler_options = '-std=c11 -Wall -Wextra -Wwrite-strings -pedantic'
+let g:syntastic_c_compiler_options = '-std=gnu89 -O -Wall -Wbad-function-cast -Wc++-compat -Wcast-qual -Wconversion -Wdeclaration-after-statement -Wextra -Wfatal-errors -Wfloat-equal -Wformat=2 -Winit-self -Winline -Winvalid-pch -Wmissing-declarations -Wmissing-include-dirs -Wmissing-prototypes -Wnested-externs -Wold-style-definition -Wpointer-arith -Wredundant-decls -Wshadow -Wstrict-prototypes -Wswitch-default -Wswitch-enum -Wundef -Wunknown-pragmas -Wunsafe-loop-optimizations -Wwrite-strings -pedantic'
 
 let g:syntastic_java_checkers = ['checkstyle', 'javac']
 let g:syntastic_java_checkstyle_classpath = '/usr/local/Cellar/checkstyle/6.9/libexec/checkstyle-6.9-all.jar'
