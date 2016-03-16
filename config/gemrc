@@ -1,0 +1,5 @@
+# vim: ft=yaml
+
+:update_sources: true
+:backtrace: true
+gem: --no-document --no-rdoc --no-ri
