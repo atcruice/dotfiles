@@ -19,7 +19,6 @@ fresh jasoncodes/dotfiles config/tmux.conf --file
 fresh config/\* --file
 
 fresh git/git contrib/diff-highlight/diff-highlight --bin
-fresh hackling/morse bin/morse --bin
 fresh jamesottaway/tmux-up tmux-up --bin
 fresh jasoncodes/dotfiles bin/adduser --bin
 fresh jasoncodes/dotfiles bin/chruby-exec-all --bin
