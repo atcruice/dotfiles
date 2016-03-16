@@ -8,7 +8,6 @@ fresh freshshell/fresh contrib/source-build.sh --file=~/.bashrc
 fresh rupa/z z.sh
 fresh shell/\*
 
-fresh altercation/solarized iterm2-colors-solarized --file=iterm2-colors-solarized/
 fresh jasoncodes/dotfiles config/ackrc --file
 fresh jasoncodes/dotfiles config/gemrc --file
 fresh jasoncodes/dotfiles config/gitconfig --file
