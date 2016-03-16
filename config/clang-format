@@ -1,6 +1,10 @@
 ---
-# BasedOnStyle: WebKit
-AccessModifierOffset: -4
+BasedOnStyle: Google
+Language: Java
+IndentWidth: 2
+---
+BasedOnStyle: WebKit
+AccessModifierOffset: 0
 AlignEscapedNewlinesLeft: false
 AlignTrailingComments: true
 AllowAllParametersOfDeclarationOnNextLine: false
