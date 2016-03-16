@@ -5,7 +5,6 @@ fresh freshshell/fresh bin/fresh --bin # handles updating fresh
 fresh freshshell/fresh contrib/source-build.sh --file=~/.bash_profile
 fresh freshshell/fresh contrib/source-build.sh --file=~/.bashrc
 
-fresh andschwa/shell .shell/path-edit.sh # clean PATH manipulation functions
 fresh bobthecow/git-flow-completion git-flow-completion.bash
 fresh freshshell/fresh contrib/completion/fresh-completion.bash
 fresh jasoncodes/dotfiles shell/aliases/git.sh
