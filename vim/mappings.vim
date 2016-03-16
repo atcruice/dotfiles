@@ -8,8 +8,6 @@ inoremap <C-U> <C-G>u<C-U>
 nnoremap <Leader>/ :nohlsearch<CR><C-L>
 " Close quickfix window
 map <Leader>k :ccl<CR>
-" Select all
-map <Leader>a ggVG
 " Movement & wrapped long lines
 nnoremap j gj
 nnoremap k gk
@@ -21,8 +19,6 @@ noremap <C-l> <C-w>l
 " Jump to start and end of line using the home row keys
 noremap H ^
 noremap L $
-" Highlight word at cursor without changing position
-nnoremap <Leader>h *<C-O>
 " Yank from the cursor to the end of the line, to be consistent with C and D
 nnoremap Y y$
 " Yank and put system pasteboard with <Leader>y/p.
@@ -37,12 +33,6 @@ nnoremap <Leader>cf :let @*=expand('%')<CR>
 nnoremap <Leader>cl :let @*=expand('%').':'.line('.')<CR>
 " quick mapping to execute the macro in q
 noremap <Leader>q @q
-" fast save
-nnoremap <Leader>w :w<CR>
-" fast buffer close
-nnoremap <Leader>x :bw<CR>
-" sort selection
-vnoremap <Leader>s :sort<CR>
 " jump to end of paste
 vnoremap y y`]
 vnoremap p p`]
