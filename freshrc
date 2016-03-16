@@ -5,9 +5,6 @@ fresh freshshell/fresh bin/fresh --bin # handles updating fresh
 fresh freshshell/fresh contrib/source-build.sh --file=~/.bash_profile
 fresh freshshell/fresh contrib/source-build.sh --file=~/.bashrc
 
-fresh jasoncodes/dotfiles shell/aliases/git.sh
-fresh jasoncodes/dotfiles shell/aliases/rails.sh
-fresh jasoncodes/dotfiles shell/aliases/ruby.sh # bundle exec everything
 fresh rupa/z z.sh
 fresh shell/\*
 
