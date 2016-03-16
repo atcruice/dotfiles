@@ -8,3 +8,4 @@ let g:NERDTreeShowLineNumbers = 0
 let g:NERDTreeMinimalUI = 1 " Disable help message
 let g:NERDTreeDirArrows = 1
 let g:NERDTreeWinPos = 'right'
+let NERDTreeIgnore=['\.xcodeproj$[[dir]]', '\.class$[[file]]', '\.o$[[file]]']
