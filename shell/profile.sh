@@ -9,8 +9,8 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 path_front '/usr/local/bin' '/usr/local/sbin'
 export PATH
 
-source_this "$(brew --prefix)/etc/bash_completion" 'bash-completion not found'
-source_this '/usr/local/opt/chruby/share/chruby/chruby.sh' 'chruby failed to load'
-source_this '/usr/local/opt/chruby/share/chruby/auto.sh' 'chruby auto-loading failed to load'
+source "$(brew --prefix)/etc/bash_completion"
+source '/usr/local/opt/chruby/share/chruby/chruby.sh'
+source '/usr/local/opt/chruby/share/chruby/auto.sh'
 
 eval "$(direnv hook bash)"
