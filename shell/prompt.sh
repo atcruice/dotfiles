@@ -51,7 +51,7 @@ function user_host {
     user="\u"
   fi
 
-  if [[ "$(hostname -s)" != "$(scutil --get ComputerName)" ]]; then
+  if [[ "$(hostname -s)" != "$(scutil --get LocalHostName)" ]]; then
     host="@\h"
   fi
 
