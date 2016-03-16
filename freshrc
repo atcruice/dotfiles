@@ -30,7 +30,6 @@ fresh-options --file=~/.vimrc
   fresh jasoncodes/dotfiles vim/config/tags.vim
   fresh vim/settings.vim
   fresh vim/mappings.vim
-  fresh vim/direnv.vim
 fresh-options
 
 update_vundle_plugins() {

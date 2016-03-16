@@ -1,0 +1,1 @@
+Plugin 'direnv/direnv.vim'
