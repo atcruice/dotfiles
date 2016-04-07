@@ -51,5 +51,10 @@ augroup END
 
 augroup indent_two
     autocmd!
-    autocmd Filetype ruby,java setlocal tabstop=2 shiftwidth=2
+    autocmd Filetype ruby,java,netlogo setlocal tabstop=2 shiftwidth=2
+augroup END
+
+augroup netlogo
+    autocmd!
+    autocmd BufRead,BufNewFile *.nlogo set filetype=netlogo
 augroup END
