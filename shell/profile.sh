@@ -7,6 +7,7 @@ export HISTCONTROL=ignorespace:erasedups
 export HISTIGNORE='ls:bg:gf:history:exit'
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+export PKG_CONFIG_PATH=/usr/X11/lib/pkgconfig:$PKG_CONFIG_PATH
 
 source "$(brew --prefix)/etc/bash_completion"
 source '/usr/local/opt/chruby/share/chruby/chruby.sh'
