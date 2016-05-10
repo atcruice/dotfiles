@@ -100,8 +100,8 @@ inform 'Installing wget'
 brew install wget
 inform 'Installing sassc'
 brew install sassc
-inform 'Installing heroku-toolbelt'
-brew install heroku-toolbelt
+inform 'Installing heroku'
+brew install heroku
 heroku login
 heroku keys:add
 inform 'Installing ncdu'
