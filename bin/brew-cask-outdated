@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+
+all_casks = `brew cask list`.split
+
+outdated_casks = all_casks.select do |cask|
+  putc '.'
+  `brew cask info #{cask}` =~ /^Not installed$/
+end
+
+puts
+
+if outdated_casks.empty?
+  puts "All casks appear up to date"
+else
+  puts "The following casks appear to have updates available:"
+  outdated_casks.each(&method(:puts))
+end
