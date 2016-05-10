@@ -46,7 +46,7 @@ set writebackup
 
 augroup indent_two
     autocmd!
-    autocmd Filetype ruby,java,netlogo setlocal tabstop=2 shiftwidth=2
+    autocmd Filetype ruby,java,netlogo,yaml setlocal tabstop=2 shiftwidth=2
 augroup END
 
 augroup netlogo
