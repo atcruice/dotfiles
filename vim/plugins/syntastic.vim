@@ -33,5 +33,5 @@ let g:syntastic_java_checkstyle_classpath = '/usr/local/Cellar/checkstyle/6.9/li
 let g:syntastic_java_checkstyle_conf_file = '~/.google_checks.xml'
 let g:syntastic_java_javac_config_file_enabled = 1
 
-let g:syntastic_sh_shellcheck_args = '--shell=bash'
+let g:syntastic_sh_shellcheck_args = "--shell=bash --external-sources"
 nmap <Leader>sc :SyntasticCheck<CR>
