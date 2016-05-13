@@ -1,5 +1,5 @@
 syntax enable
-colorscheme jellybeans
+colorscheme tender
 highlight Search ctermbg=red ctermfg=white
 
 set autoread
