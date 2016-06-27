@@ -9,3 +9,6 @@
 [alias]
     s = status --untracked-files=all
     l = log --oneline --decorate --graph
+
+[branch]
+    autoSetupRebase = always
