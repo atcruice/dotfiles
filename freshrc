@@ -10,8 +10,6 @@ fresh shell/\*
 
 fresh jasoncodes/dotfiles config/ackrc --file
 fresh jasoncodes/dotfiles config/gitconfig --file
-fresh jasoncodes/dotfiles config/psqlrc --file
-fresh jasoncodes/dotfiles config/sqliterc --file
 fresh jasoncodes/dotfiles config/tmux.conf --file
 fresh config/\* --file
 
