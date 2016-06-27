@@ -17,7 +17,6 @@ fresh config/\* --file
 
 fresh git/git contrib/diff-highlight/diff-highlight --bin
 fresh jasoncodes/dotfiles bin/chruby-exec-all --bin
-fresh jasoncodes/dotfiles bin/wemux/\* --bin
 
 fresh-options --file=~/.vimrc
   fresh vim/encoding.vim
