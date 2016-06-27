@@ -9,6 +9,8 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 export PKG_CONFIG_PATH=/usr/X11/lib/pkgconfig:$PKG_CONFIG_PATH
 export TRAVELLING_RUBY_PACKAGE_DIR="$HOME/src"
+export GPG_TTY
+GPG_TTY=$(tty)
 
 source "$(brew --prefix)/etc/bash_completion"
 source '/usr/local/opt/chruby/share/chruby/chruby.sh'
