@@ -84,7 +84,7 @@ function git_info {
 
   # check if it's dirty (via github.com/sindresorhus/pure)
   local dirty
-  dirty=$(git diff --quiet --ignore-submodules HEAD &>/dev/null; [ $? -eq 1 ]&& echo -e "≠")
+  dirty=$(git diff --quiet --ignore-submodules HEAD &>/dev/null; [ $? -eq 1 ]&& echo -e "*")
 
   echo "\[$FG_BLACK\]\[$BG_YELLOW\] $branch$dirty \[$RESET\]"
 }
