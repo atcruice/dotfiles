@@ -1,6 +1,6 @@
 # ANSI escape aliases
 RESET="\033[0m"
-BOLD_ON="\033[1m"
+# BOLD_ON="\033[1m"
 # BOLD_OFF="\033[22m"
 # ITALIC_ON="\033[3m"
 # ITALIC_OFF="\033[23m"
@@ -27,20 +27,20 @@ FG_GREEN="\033[32m"
 # FG_LIGHT_MAGENTA="\033[96m"
 # FG_WHITE="\033[97m"
 # BG_BLACK="\033[40m"
-# BG_RED="\033[41m"
+BG_RED="\033[41m"
 # BG_GREEN="\033[42m"
-# BG_YELLOW="\033[43m"
+BG_YELLOW="\033[43m"
 # BG_BLUE="\033[44m"
-# BG_MAGENTA="\033[45m"
-# BG_CYAN="\033[46m"
+BG_MAGENTA="\033[45m"
+BG_CYAN="\033[46m"
 # BG_LIGHT_GREY="\033[47m"
 # BG_DARK_GREY="\033[100m"
-BG_LIGHT_RED="\033[101m"
+# BG_LIGHT_RED="\033[101m"
 # BG_LIGHT_GREEN="\033[102m"
-BG_LIGHT_YELLOW="\033[103m"
+# BG_LIGHT_YELLOW="\033[103m"
 # BG_LIGHT_BLUE="\033[104m"
-BG_LIGHT_MAGENTA="\033[105m"
-BG_LIGHT_CYAN="\033[106m"
+# BG_LIGHT_MAGENTA="\033[105m"
+# BG_LIGHT_CYAN="\033[106m"
 # BG_WHITE="\033[107m"
 
 function user_host {
@@ -56,7 +56,7 @@ function user_host {
   fi
 
   if [[ -n $user || -n $host ]]; then
-    echo "\[$FG_BLACK\]\[$BG_LIGHT_MAGENTA\] $user$host \[$RESET\]"
+    echo "\[$FG_BLACK\]\[$BG_MAGENTA\] $user$host \[$RESET\]"
   else
     echo ""
   fi
@@ -64,14 +64,14 @@ function user_host {
 
 function which_ruby {
   if [[ -n $RUBY_VERSION ]]; then
-    echo "\[$FG_BLACK\]\[$BG_LIGHT_RED\] $RUBY_VERSION \[$RESET\]"
+    echo "\[$FG_BLACK\]\[$BG_RED\] $RUBY_VERSION \[$RESET\]"
   else
     echo ""
   fi
 }
 
 function current_dir {
-  echo "\[$FG_BLACK\]\[$BG_LIGHT_CYAN\] \w \[$RESET\]"
+  echo "\[$FG_BLACK\]\[$BG_CYAN\] \w \[$RESET\]"
 }
 
 function git_info {
@@ -86,15 +86,15 @@ function git_info {
   local dirty
   dirty=$(git diff --quiet --ignore-submodules HEAD &>/dev/null; [ $? -eq 1 ]&& echo -e "≠")
 
-  echo "\[$FG_BLACK\]\[$BG_LIGHT_YELLOW\] $branch$dirty \[$RESET\]"
+  echo "\[$FG_BLACK\]\[$BG_YELLOW\] $branch$dirty \[$RESET\]"
 }
 
 function exit_good {
-  echo "$(user_host)$(which_ruby)$(current_dir)$(git_info)$(printf \"\\n\")\[$BOLD_ON\]\[$FG_GREEN\]\$ \[$RESET\]"
+  echo "$(user_host)$(which_ruby)$(current_dir)$(git_info)$(printf \"\\n\")\[$FG_GREEN\]\$ \[$RESET\]"
 }
 
 function exit_bad {
-  echo "$(user_host)$(which_ruby)$(current_dir)$(git_info)$(printf \"\\n\")\[$BOLD_ON\]\[$FG_RED\]\$ \[$RESET\]"
+  echo "$(user_host)$(which_ruby)$(current_dir)$(git_info)$(printf \"\\n\")\[$FG_RED\]\$ \[$RESET\]"
 }
 
 function custom_prompt {
