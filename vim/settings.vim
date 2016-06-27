@@ -1,5 +1,6 @@
 syntax enable
-colorscheme tender
+set background=dark
+colorscheme base16-eighties
 highlight Search ctermbg=red ctermfg=white
 
 set autoread
