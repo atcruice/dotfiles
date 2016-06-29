@@ -1,7 +1,7 @@
 syntax enable
 set background=dark
 colorscheme base16-eighties
-highlight Search ctermbg=red ctermfg=white
+highlight Search ctermbg=DarkRed ctermfg=white
 
 set autoread
 set autowriteall
