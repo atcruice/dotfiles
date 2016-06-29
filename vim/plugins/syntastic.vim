@@ -35,3 +35,5 @@ let g:syntastic_java_javac_config_file_enabled = 1
 
 let g:syntastic_sh_shellcheck_args = "--shell=bash --external-sources"
 nmap <Leader>sc :SyntasticCheck<CR>
+
+let g:syntastic_javascript_checkers = ['gjslint']
