@@ -10,7 +10,6 @@ fresh shell/\*
 
 fresh jasoncodes/dotfiles config/ackrc --file
 fresh jasoncodes/dotfiles config/gitconfig --file
-fresh jasoncodes/dotfiles config/tmux.conf --file
 fresh config/\* --file
 
 fresh git/git contrib/diff-highlight/diff-highlight --bin

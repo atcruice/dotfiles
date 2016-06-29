@@ -90,8 +90,6 @@ brew tap homebrew/dupes
 brew install tidy
 inform 'Installing vim'
 brew install vim --override-system-vi
-inform 'Installing tmux'
-brew install tmux
 inform 'Installing reattach-to-user-namespace'
 brew install reattach-to-user-namespace
 inform 'Installing wemux'
