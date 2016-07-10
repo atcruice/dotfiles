@@ -36,3 +36,10 @@ Thumbs.db
 
 # personal dev environment
 .syntastic_javac_config
+
+# Code Climate config files
+*.reek
+.codeclimate.yml
+.csslintrc
+.eslintignore
+.eslintrc
