@@ -1,4 +1,4 @@
 Plugin 'mileszs/ack.vim'
-nnoremap <Leader>H *<C-O>:AckFromSearch!<CR>
-nmap <Leader>f :Ack!<Space>
-nmap <Leader>F :AckFromSearch!<CR>
+cnoreabbrev Ack Ack!
+nnoremap <Leader>a :Ack!<Space>
+nnoremap <Leader>A :AckFromSearch!<CR>
