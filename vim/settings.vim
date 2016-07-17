@@ -55,3 +55,9 @@ augroup netlogo
     autocmd!
     autocmd BufRead,BufNewFile *.nlogo set filetype=netlogo
 augroup END
+
+augroup ternconfig
+    autocmd!
+    autocmd BufRead,BufNewFile .tern-project set filetype=json
+    autocmd BufRead,BufNewFile .tern-config set filetype=json
+augroup END
