@@ -17,7 +17,6 @@ fresh jasoncodes/dotfiles bin/chruby-exec-all --bin
 
 fresh-options --file=~/.vimrc
   fresh vim/encoding.vim
-  fresh vim/mapleader.vim
   fresh vim/vundle_header.vim
   fresh vim/plugins/\*.vim
   fresh jasoncodes/dotfiles vim/plugins/ctrlp.vim
