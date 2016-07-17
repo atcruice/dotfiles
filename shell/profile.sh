@@ -18,5 +18,4 @@ source '/usr/local/opt/chruby/share/chruby/auto.sh'
 
 eval "$(direnv hook bash)"
 
-alias be="bundle exec "
 alias gemscrub="gem pristine --all --env-shebang --no-extensions "
