@@ -36,6 +36,7 @@ Thumbs.db
 
 # personal dev environment
 .syntastic_javac_config
+.tern-project
 
 # Code Climate config files
 *.reek
