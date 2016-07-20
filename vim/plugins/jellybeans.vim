@@ -1,1 +1,0 @@
-Plugin 'nanotech/jellybeans.vim'
