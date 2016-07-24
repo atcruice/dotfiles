@@ -1,4 +1,4 @@
-Plugin 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree'
 noremap <Leader>] :NERDTreeToggle<CR>
 let g:loaded_netrw = 1 " Disable netrw
 let g:loaded_netrwPlugin = 1 " Disable netrw

@@ -17,26 +17,24 @@ fresh jasoncodes/dotfiles bin/chruby-exec-all --bin
 
 fresh-options --file=~/.vimrc
   fresh vim/encoding.vim
-  fresh vim/vundle_header.vim
+  fresh vim/vim-plug_header.vim
   fresh vim/plugins/\*.vim
-  fresh jasoncodes/dotfiles vim/plugins/ctrlp.vim
-  fresh vim/vundle_footer.vim
-  fresh jasoncodes/dotfiles vim/config/tags.vim
+  fresh vim/vim-plug_footer.vim
   fresh vim/settings.vim
   fresh vim/mappings.vim
 fresh-options
 
-update_vundle_plugins() {
-  read -rp 'Update vundle plugins? (y/n): ' answer
+update_vimplug() {
+  read -rp 'Update vim-plug? (y/n): ' answer
 
   if [[ "$answer" = 'y' ]]
   then
-    vim +PluginUpdate +PluginClean! +qall
+    vim +PlugUpdate +PlugClean! +PlugUpgrade +qall
   else
-    vim +PluginInstall +PluginClean +qall
+    vim +PlugInstall +qall
   fi
 }
 
 fresh_after_build() {
-  update_vundle_plugins
+  update_vimplug
 }

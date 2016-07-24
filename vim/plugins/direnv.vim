@@ -1,1 +1,1 @@
-Plugin 'direnv/direnv.vim'
+Plug 'direnv/direnv.vim'

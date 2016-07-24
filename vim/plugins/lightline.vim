@@ -1,4 +1,4 @@
-Plugin 'itchyny/lightline.vim'
+Plug 'itchyny/lightline.vim'
 set laststatus=2
 set noshowmode
 

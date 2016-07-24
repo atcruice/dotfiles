@@ -1,1 +1,1 @@
-Plugin 'mattn/emmet-vim'
+Plug 'mattn/emmet-vim'

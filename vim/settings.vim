@@ -1,3 +1,4 @@
+filetype plugin indent on
 syntax enable
 set background=dark
 colorscheme base16-eighties
@@ -20,6 +21,7 @@ set includeexpr=substitute(v:fname,'\\.','/','g')
 set incsearch
 set linebreak
 set mouse=a
+set nocompatible
 set noequalalways
 set nolist
 set nostartofline

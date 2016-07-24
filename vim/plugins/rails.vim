@@ -1,1 +1,1 @@
-Plugin 'tpope/vim-rails'
+Plug 'tpope/vim-rails'

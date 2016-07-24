@@ -177,9 +177,6 @@ brew cask install budget
 inform 'Installing Ubuntu fonts'
 brew cask tap caskroom/fonts
 brew cask install font-ubuntu-mono-powerline
-inform 'Installing Vundle'
-git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-vim +PluginInstall! +PluginClean! +qall
 inform 'Installing FunctionFlip'
 brew cask install functionflip
 inform 'Installing Spotify'
