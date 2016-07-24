@@ -8,3 +8,6 @@ nnoremap gQ <Nop>
 " disable adding and subtracting
 nnoremap <C-a> <Nop>
 nnoremap <C-x> <Nop>
+
+" on-demand clang-format
+map <Leader>cff :pyf /usr/local/opt/clang-format/share/clang/clang-format.py<CR>
