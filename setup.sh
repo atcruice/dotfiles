@@ -212,25 +212,3 @@ inform 'Installing PostgreSQL'
 brew install postgres
 ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents
 launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
-
-inform 'Installing useful gems across all rubies'
-inform 'Installing bundler'
-chruby-exec-all gem install bundler
-inform 'Installing rubocop'
-chruby-exec-all gem install rubocop
-inform 'Installing git-up'
-chruby-exec-all gem install git-up
-inform 'Installing awesome_print'
-chruby-exec-all gem install awesome_print
-inform 'Installing pry'
-chruby-exec-all gem install pry
-inform 'Installing pry-nav'
-chruby-exec-all gem install pry-nav
-inform 'Installing wirble'
-chruby-exec-all gem install wirble
-inform 'Installing bond'
-chruby-exec-all gem install bond
-inform 'Installing CoffeeTags'
-chruby-exec-all gem install CoffeeTags
-inform 'Installing haml-lint'
-chruby-exec-all gem install haml-lint
