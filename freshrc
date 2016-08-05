@@ -8,7 +8,6 @@ fresh freshshell/fresh contrib/source-build.sh --file=~/.bashrc
 fresh rupa/z z.sh
 fresh shell/\*
 
-fresh jasoncodes/dotfiles config/gitconfig --file
 fresh config/\* --file
 
 fresh git/git contrib/diff-highlight/diff-highlight --bin
