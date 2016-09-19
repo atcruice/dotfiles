@@ -35,6 +35,7 @@ Thumbs.db
 .envrc
 
 # personal dev environment
+.byebug_history
 .syntastic_javac_config
 .tern-project
 
