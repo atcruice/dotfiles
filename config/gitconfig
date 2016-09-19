@@ -50,6 +50,7 @@
 [alias]
     s = status --untracked-files=all
     l = log --oneline --decorate --graph
+    wip = commit -m "WIP"
 
 [branch]
     autoSetupRebase = always
