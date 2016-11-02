@@ -44,4 +44,4 @@ Thumbs.db
 .codeclimate.yml
 .csslintrc
 .eslintignore
-.eslintrc
+.eslintrc*
