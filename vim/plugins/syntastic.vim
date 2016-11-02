@@ -31,4 +31,4 @@ let g:syntastic_java_javac_config_file_enabled = 1
 
 let g:syntastic_sh_shellcheck_args = "--shell=bash --external-sources"
 
-let g:syntastic_javascript_checkers = ['gjslint']
+let g:syntastic_javascript_checkers = ['eslint']
