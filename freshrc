@@ -19,18 +19,3 @@ fresh-options --file=~/.vimrc
   fresh vim/settings.vim
   fresh vim/mappings.vim
 fresh-options
-
-update_vimplug() {
-  read -rp 'Update vim-plug? (y/n): ' answer
-
-  if [[ "$answer" = 'y' ]]
-  then
-    vim +PlugUpdate +PlugClean! +PlugUpgrade +qall
-  else
-    vim +PlugInstall +qall
-  fi
-}
-
-fresh_after_build() {
-  update_vimplug
-}
