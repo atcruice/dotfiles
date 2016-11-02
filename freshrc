@@ -5,6 +5,7 @@ fresh freshshell/fresh bin/fresh --bin # handles updating fresh
 fresh freshshell/fresh contrib/source-build.sh --file=~/.bash_profile
 fresh freshshell/fresh contrib/source-build.sh --file=~/.bashrc
 
+fresh rupa/z z.sh
 fresh shell/\*
 
 fresh config/\* --file
