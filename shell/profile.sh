@@ -14,6 +14,9 @@ export TRAVELLING_RUBY_PACKAGE_DIR="$HOME/src"
 export GPG_TTY
 GPG_TTY=$(tty)
 
+export NVM_DIR="$HOME/.nvm"
+source "$(brew --prefix nvm)/nvm.sh"
+
 source "$(brew --prefix)/etc/bash_completion"
 source '/usr/local/opt/chruby/share/chruby/chruby.sh'
 source '/usr/local/opt/chruby/share/chruby/auto.sh'
