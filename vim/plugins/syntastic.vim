@@ -9,6 +9,7 @@ let g:syntastic_error_symbol = "*"
 let g:syntastic_style_error_symbol = "*"
 let g:syntastic_warning_symbol = "•"
 let g:syntastic_style_warning_symbol = "•"
+" let g:syntastic_debug=1
 
 let g:syntastic_ruby_checkers = ['rubocop', 'mri']
 let g:syntastic_ruby_rubocop_args = "--rails"
