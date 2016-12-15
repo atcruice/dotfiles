@@ -38,6 +38,8 @@ set smartcase
 set smartindent
 set smarttab
 set spelllang=en_au
+set splitbelow
+set splitright
 set switchbuf=useopen
 set tabstop=4
 set timeoutlen=1000 ttimeoutlen=0
