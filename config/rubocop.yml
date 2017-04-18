@@ -44,11 +44,7 @@ Lint/AssignmentInCondition:
 Lint/BlockAlignment:
   Description: Align block ends correctly.
   Enabled: false # ignored
-  AlignWith: either
-  SupportedStyles:
-  - either
-  - start_of_block
-  - start_of_line
+  EnforcedStyleAlignWith: either
 
 Lint/CircularArgumentReference:
   Description: Default values in optional keyword arguments and optional ordinal arguments
@@ -69,10 +65,7 @@ Lint/Debugger:
 Lint/DefEndAlignment:
   Description: Align ends corresponding to defs correctly.
   Enabled: false # ignored
-  AlignWith: start_of_line
-  SupportedStyles:
-  - start_of_line
-  - def
+  EnforcedStyleAlignWith: start_of_line
   AutoCorrect: false
 
 # Supports --auto-correct
@@ -108,11 +101,7 @@ Lint/EmptyInterpolation:
 Lint/EndAlignment:
   Description: Align ends correctly.
   Enabled: false # ignored
-  AlignWith: keyword
-  SupportedStyles:
-  - keyword
-  - variable
-  - start_of_line
+  EnforcedStyleAlignWith: keyword
   AutoCorrect: false
 
 Lint/EndInMethod:
@@ -124,7 +113,7 @@ Lint/EnsureReturn:
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#no-return-ensure
   Enabled: false # ignored
 
-Lint/Eval:
+Security/Eval:
   Description: The use of eval represents a serious security risk.
   Enabled: false # ignored
 
@@ -245,11 +234,6 @@ Lint/UnusedMethodArgument:
 
 Lint/UselessAccessModifier:
   Description: Checks for useless access modifiers.
-  Enabled: false # ignored
-
-# Supports --auto-correct
-Lint/UselessArraySplat:
-  Description: Checks for useless array splats.
   Enabled: false # ignored
 
 Lint/UselessAssignment:
@@ -728,7 +712,7 @@ Style/CaseIndentation:
   Description: Indentation of when in a case/when/[else/]end.
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#indent-when-to-case
   Enabled: false # ignored
-  IndentWhenRelativeTo: case
+  EnforcedStyle: case
   SupportedStyles:
   - case
   - end
@@ -854,12 +838,6 @@ Style/Copyright:
 Style/DefWithParentheses:
   Description: Use def with parentheses when there are arguments.
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#method-parens
-  Enabled: false # ignored
-
-# Supports --auto-correct
-Style/DeprecatedHashMethods:
-  Description: Checks for use of deprecated Hash methods.
-  StyleGuide: https://github.com/bbatsov/ruby-style-guide#hash-key
   Enabled: false # ignored
 
 Style/Documentation:
@@ -1218,7 +1196,7 @@ Style/LineEndConcatenation:
   Enabled: false # ignored
 
 # Supports --auto-correct
-Style/MethodCallParentheses:
+Style/MethodCallWithoutArgsParentheses:
   Description: Do not use parentheses for method calls with no arguments.
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#no-args-no-parens
   Enabled: false # ignored
@@ -1686,9 +1664,6 @@ Style/SpaceAroundBlockParameters:
   Description: Checks the spacing inside and after block parameters pipes.
   Enabled: false # ignored
   EnforcedStyleInsidePipes: no_space
-  SupportedStyles:
-  - space
-  - no_space
 
 # Supports --auto-correct
 Style/SpaceAroundEqualsInParameterDefault:
@@ -1893,10 +1868,6 @@ Style/TrailingCommaInArguments:
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#no-trailing-array-commas
   Enabled: false # ignored
   EnforcedStyleForMultiline: no_comma
-  SupportedStyles:
-  - comma
-  - consistent_comma
-  - no_comma
 
 # Supports --auto-correct
 Style/TrailingCommaInLiteral:
@@ -1904,10 +1875,6 @@ Style/TrailingCommaInLiteral:
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#no-trailing-array-commas
   Enabled: false # ignored
   EnforcedStyleForMultiline: no_comma
-  SupportedStyles:
-  - comma
-  - consistent_comma
-  - no_comma
 
 # Supports --auto-correct
 Style/TrailingUnderscoreVariable:
