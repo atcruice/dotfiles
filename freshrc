@@ -10,8 +10,6 @@ fresh shell/\*
 
 fresh config/\* --file
 
-fresh git/git contrib/diff-highlight/diff-highlight --bin
-
 fresh-options --file=~/.vimrc
   fresh vim/encoding.vim
   fresh vim/vim-plug_header.vim
