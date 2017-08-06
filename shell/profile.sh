@@ -22,5 +22,3 @@ source '/usr/local/opt/chruby/share/chruby/chruby.sh'
 source '/usr/local/opt/chruby/share/chruby/auto.sh'
 
 eval "$(direnv hook bash)"
-
-alias gemscrub="gem pristine --all --env-shebang --no-extensions "
