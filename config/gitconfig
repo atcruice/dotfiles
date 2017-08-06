@@ -53,3 +53,6 @@
 
 [branch]
     autoSetupRebase = always
+
+[diff-so-fancy]
+    first-run = false
