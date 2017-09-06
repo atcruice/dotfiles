@@ -7,9 +7,6 @@
 [color "diff"]
     commit = yellow reverse
 
-[interactive]
-    diffFilter = diff-so-fancy
-
 [push]
     default = tracking
 
@@ -44,7 +41,6 @@
 
 [core]
     excludesfile = ~/.gitignore
-    pager = diff-so-fancy | less --tabs=2 --RAW-CONTROL-CHARS --quit-if-one-screen --no-init
 
 [alias]
     s = status --untracked-files=all
@@ -53,6 +49,3 @@
 
 [branch]
     autoSetupRebase = always
-
-[diff-so-fancy]
-    first-run = false
