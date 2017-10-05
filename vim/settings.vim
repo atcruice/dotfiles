@@ -1,7 +1,7 @@
 filetype plugin indent on
 syntax enable
 set background=dark
-colorscheme base16-eighties
+colorscheme jellybeans
 highlight Search ctermbg=DarkRed ctermfg=white
 
 set autoread
