@@ -9,7 +9,7 @@ set autowriteall
 set backspace=indent,eol,start
 set breakindent
 set breakindentopt=shift:2
-set colorcolumn=80
+set cursorcolumn
 set cursorline
 set expandtab
 set exrc
