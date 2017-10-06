@@ -1,12 +1,8 @@
-filetype plugin indent on
-syntax enable
 set background=dark
 colorscheme jellybeans
 highlight Search ctermbg=DarkRed ctermfg=white
 
-set autoread
 set autowriteall
-set backspace=indent,eol,start
 set breakindent
 set breakindentopt=shift:2
 set cursorcolumn
@@ -14,11 +10,9 @@ set cursorline
 set expandtab
 set exrc
 set hidden
-set history=1000
 set hlsearch
 set ignorecase
 set includeexpr=substitute(v:fname,'\\.','/','g')
-set incsearch
 set linebreak
 set mouse=a
 set nocompatible
@@ -27,8 +21,6 @@ set nolist
 set nostartofline
 set noswapfile
 set number
-set ruler
-set scrolloff=3
 set secure
 set shiftround
 set shiftwidth=4
@@ -36,16 +28,13 @@ set shortmess+=I
 set showcmd
 set smartcase
 set smartindent
-set smarttab
 set spelllang=en_au
 set splitbelow
 set splitright
 set switchbuf=useopen
 set tabstop=4
-set timeoutlen=1000 ttimeoutlen=0
 set title
 set ttyfast
-set wildmenu
 set wildmode=list:longest
 set wrap
 set writebackup

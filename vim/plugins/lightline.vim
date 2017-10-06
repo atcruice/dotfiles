@@ -1,5 +1,4 @@
 Plug 'itchyny/lightline.vim'
-set laststatus=2
 set noshowmode
 
 if !has('gui_running')
