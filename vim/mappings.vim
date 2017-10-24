@@ -11,3 +11,6 @@ nnoremap <C-x> <Nop>
 
 " on-demand clang-format
 map <Leader>cff :pyf /usr/local/opt/clang-format/share/clang/clang-format.py<CR>
+
+" copy full path of current buffer to system clipboard
+map <Leader>cfp :let @+ = expand("%:p")
