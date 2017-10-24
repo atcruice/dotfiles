@@ -38,6 +38,7 @@ Thumbs.db
 .byebug_history
 .syntastic_javac_config
 .tern-project
+tags
 
 # Code Climate config files
 *.reek
