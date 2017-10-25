@@ -36,7 +36,6 @@ Thumbs.db
 
 # personal dev environment
 .byebug_history
-.syntastic_javac_config
 .tern-project
 tags
 
