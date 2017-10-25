@@ -54,3 +54,10 @@ augroup ternconfig
     autocmd BufRead,BufNewFile .tern-project set filetype=json
     autocmd BufRead,BufNewFile .tern-config set filetype=json
 augroup END
+
+" Load all plugins now. Plugins need to be added to runtimepath before
+" helptags can be generated.
+packloadall
+" Load all of the helptags now, after plugins have been loaded. All messages
+" and errors will be ignored.
+silent! helptags ALL
