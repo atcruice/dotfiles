@@ -39,6 +39,11 @@ set wildmode=list:longest
 set wrap
 set writebackup
 
+let g:netrw_banner = 0
+let g:netrw_browse_split = 4
+let g:netrw_liststyle = 3
+let g:netrw_winsize = 25
+
 augroup indent_two
     autocmd!
     autocmd Filetype ruby,eruby,java,yaml,javascript,vue,liquid,scss,json setlocal tabstop=2 shiftwidth=2
