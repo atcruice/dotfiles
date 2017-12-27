@@ -41,7 +41,7 @@ set writebackup
 
 augroup indent_two
     autocmd!
-    autocmd Filetype ruby,eruby,java,yaml,javascript,vue,liquid,scss setlocal tabstop=2 shiftwidth=2
+    autocmd Filetype ruby,eruby,java,yaml,javascript,vue,liquid,scss,json setlocal tabstop=2 shiftwidth=2
 augroup END
 
 augroup ternconfig
