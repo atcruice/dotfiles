@@ -24,3 +24,19 @@ source '/usr/local/opt/chruby/share/chruby/chruby.sh'
 source '/usr/local/opt/chruby/share/chruby/auto.sh'
 
 eval "$(direnv hook bash)"
+
+# fzf via brew
+FZF_BASH_FILES=("/usr/local/opt/fzf/shell/completion.bash" "/usr/local/opt/fzf/shell/key-bindings.bash")
+for FILE in "${FZF_BASH_FILES[@]}"; do
+    if [[ -r $FILE ]]; then
+        source "$FILE"
+    fi
+done
+unset FZF_BASH_FILES
+
+# use ag for fzf
+if _has fzf && _has ag; then
+    export FZF_DEFAULT_COMMAND='ag --nocolor -g ""'
+    export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+    export FZF_ALT_C_COMMAND="$FZF_DEFAULT_COMMAND"
+fi
