@@ -5,8 +5,6 @@ highlight Search ctermbg=DarkRed ctermfg=white
 set autowriteall
 set breakindent
 set breakindentopt=shift:2
-set cursorcolumn
-set cursorline
 set expandtab
 set exrc
 set hidden
