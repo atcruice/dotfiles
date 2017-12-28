@@ -53,6 +53,11 @@ augroup ternconfig
     autocmd BufRead,BufNewFile .tern-config set filetype=json
 augroup END
 
+augroup vue_syntax
+    autocmd!
+    autocmd Filetype vue syntax sync fromstart
+augroup END
+
 " Load all plugins now. Plugins need to be added to runtimepath before
 " helptags can be generated.
 packloadall
