@@ -1,3 +1,5 @@
+#!/bin/bash
+
 stty -ixon
 shopt -s cdspell histappend no_empty_cmd_completion
 

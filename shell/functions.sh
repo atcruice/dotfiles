@@ -1,3 +1,5 @@
+#!/bin/bash
+
 function vimplug {
     if [[ -n $1 ]]
     then

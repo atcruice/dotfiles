@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Terminfo escape aliases
 RESET="\[$(tput sgr0)\]"
 # BLACK="\[$(tput setaf 0)\]"
