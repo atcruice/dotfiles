@@ -1,0 +1,24 @@
+# add as launchd jobs
+# tarsnapper -c /Users/alexcruice/.tarsnapper.yml make
+dateformat: "%Y-%m-%dT%H:%M:%S.%f%z"
+deltas: "1h 1d 7d 1827d"
+target: "/root/$name-$date"
+
+jobs:
+  nausicaa:
+    sources:
+      - "/Users/alexcruice"
+    excludes:
+      - "*/tmp/*"
+      - "/Users/alexcruice/.android"
+      - "/Users/alexcruice/Applications"
+      - "/Users/alexcruice/Dropbox (Five Good Friends)"
+      - "/Users/alexcruice/Dropbox (Personal)"
+      - "/Users/alexcruice/Google Drive"
+      - "/Users/alexcruice/Library/Android"
+      - "/Users/alexcruice/Library/Caches"
+      - "/Users/alexcruice/Library/Developer"
+      - "/Users/alexcruice/Library/Logs"
+      - "/Users/alexcruice/code/fivegoodfriends"
+      - "/Users/alexcruice/go"
+      - "/Users/alexcruice/src"
