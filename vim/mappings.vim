@@ -17,3 +17,7 @@ map <Leader>cfp :let @+ = expand("%:p")
 
 " sort inside indent
 map <Leader>sii vii:sort<CR>
+
+" improve wrapped line nagivation
+map j gj
+map k gk
