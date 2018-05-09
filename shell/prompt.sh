@@ -34,11 +34,11 @@ function git_branch_dirty {
 }
 
 function exit_code_zero {
-    echo -e "$MAGENTA\u@\h $CYAN\w $(ruby_version)$(git_branch_dirty)$GREEN\$ $RESET"
+    echo -e "$CYAN\w $(ruby_version)$(git_branch_dirty)$GREEN\$ $RESET"
 }
 
 function exit_code_nonzero {
-    echo -e "$MAGENTA\u@\h $CYAN\w $(ruby_version)$(git_branch_dirty)$RED\$ $RESET"
+    echo -e "$CYAN\w $(ruby_version)$(git_branch_dirty)$RED\$ $RESET"
 }
 
 function set_PS1 {
