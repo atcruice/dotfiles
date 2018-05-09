@@ -40,7 +40,7 @@
     signingkey = B42E15B6B9208755
 
 [core]
-    excludesfile = ~/.gitignore
+    excludesfile = ~/.gitignore_global
 
 [alias]
     s = status --untracked-files=all
