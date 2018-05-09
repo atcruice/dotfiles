@@ -14,7 +14,6 @@ set ignorecase
 set includeexpr=substitute(v:fname,'\\.','/','g')
 set linebreak
 set mouse=a
-set nocompatible
 set noequalalways
 set nolist
 set nostartofline
