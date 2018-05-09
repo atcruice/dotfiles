@@ -21,6 +21,7 @@ set nostartofline
 set noswapfile
 set number
 set secure
+set shell=$SHELL
 set shiftround
 set shiftwidth=4
 set shortmess+=I
