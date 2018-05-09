@@ -50,5 +50,5 @@
 [branch]
     autoSetupRebase = always
 
-[commmit]
+[commit]
     gpgsign = true
