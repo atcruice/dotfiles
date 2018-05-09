@@ -43,8 +43,10 @@
     excludesfile = ~/.gitignore_global
 
 [alias]
-    s = status --untracked-files=all
+    ap = add --patch
     l = log --oneline --decorate --graph
+    pp = pull --prune
+    s = status --untracked-files=all
     wip = commit -m "WIP"
 
 [branch]
