@@ -3,6 +3,7 @@
 stty -ixon
 shopt -s cdspell histappend no_empty_cmd_completion
 
+export CDPATH=".:~:~/code/fivegoodfriends:~/code/alexcruice"
 export CLICOLOR="1"
 export EDITOR="vim"
 GOPATH="$(go env GOPATH)"
