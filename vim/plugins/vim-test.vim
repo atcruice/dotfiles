@@ -1,5 +1,0 @@
-Plug 'janko-m/vim-test'
-
-nmap <Leader>tf :TestFile<CR>
-nmap <Leader>tl :TestLast<CR>
-nmap <Leader>tn :TestNearest<CR>

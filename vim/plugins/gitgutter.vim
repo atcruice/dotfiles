@@ -1,5 +1,0 @@
-Plug 'airblade/vim-gitgutter'
-let g:gitgutter_map_keys = 0
-nmap [c <Plug>GitGutterPrevHunk
-nmap ]c <Plug>GitGutterNextHunk
-nmap <Leader>gguh <Plug>GitGutterUndoHunk

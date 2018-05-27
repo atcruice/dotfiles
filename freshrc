@@ -8,12 +8,3 @@ fresh freshshell/fresh contrib/source-build.sh --file=~/.bashrc
 fresh shell/\*
 
 fresh config/\* --file
-
-fresh-options --file=~/.vimrc
-  fresh vim/encoding.vim
-  fresh vim/vim-plug_header.vim
-  fresh vim/plugins/\*.vim
-  fresh vim/vim-plug_footer.vim
-  fresh vim/settings.vim
-  fresh vim/mappings.vim
-fresh-options

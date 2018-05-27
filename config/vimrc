@@ -1,0 +1,189 @@
+scriptencoding utf-8
+
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !echo "Installing vim-plug..."
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+endif
+
+call plug#begin('~/.vim/plugged')
+
+Plug 'Valloric/YouCompleteMe'
+
+let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
+let g:ycm_show_diagnostics_ui = 0
+let g:ycm_autoclose_preview_window_after_completion = 1
+
+Plug 'mileszs/ack.vim'
+cnoreabbrev Ack Ack!
+nnoremap <Leader>a :Ack!<Space>
+nnoremap <Leader>A :AckFromSearch!<CR>
+
+if executable('ag')
+    let g:ackprg = 'ag --nogroup --nocolor --column'
+endif
+
+Plug 'w0rp/ale'
+
+Plug 'ntpeters/vim-better-whitespace'
+
+Plug 'mattn/emmet-vim'
+
+Plug 'tpope/vim-eunuch'
+
+Plug 'tpope/vim-fugitive'
+
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
+
+nmap ; :Buffers<CR>
+nmap <Leader>f :Files<CR>
+nmap <Leader>m :GitFiles?<CR>
+
+Plug 'airblade/vim-gitgutter'
+let g:gitgutter_map_keys = 0
+nmap [c <Plug>GitGutterPrevHunk
+nmap ]c <Plug>GitGutterNextHunk
+nmap <Leader>gguh <Plug>GitGutterUndoHunk
+
+Plug 'nanotech/jellybeans.vim'
+
+Plug 'itchyny/lightline.vim'
+set noshowmode
+
+if !has('gui_running')
+  set t_Co=256
+endif
+
+Plug 'tpope/vim-liquid'
+
+Plug 'matze/vim-move'
+let g:move_map_keys = 0
+" Use option-J/K to bubble lines up and down
+nmap ˚ <Plug>MoveLineUp
+nmap ∆ <Plug>MoveLineDown
+vmap ˚ <Plug>MoveBlockUp
+vmap ∆ <Plug>MoveBlockDown
+
+Plug 'tpope/vim-rails'
+
+Plug 'tpope/vim-sensible'
+
+Plug 'tpope/vim-surround'
+
+Plug 'tomtom/tcomment_vim'
+
+Plug 'kana/vim-textobj-user' | Plug 'kana/vim-textobj-indent'
+
+Plug 'tpope/vim-unimpaired'
+
+" brew tap universal-ctags/universal-ctags
+" brew install --HEAD universal-ctags
+" gem install CoffeeTags
+
+Plug 'ludovicchabant/vim-gutentags'
+
+let g:gutentags_cache_dir = '/tmp'
+
+Plug 'sheerun/vim-polyglot'
+
+Plug 'janko-m/vim-test'
+
+nmap <Leader>tf :TestFile<CR>
+nmap <Leader>tl :TestLast<CR>
+nmap <Leader>tn :TestNearest<CR>
+
+Plug 'lmeijvogel/vim-yaml-helper'
+
+call plug#end()
+
+set background=dark
+colorscheme jellybeans
+highlight Search ctermbg=DarkRed ctermfg=white
+
+set autowriteall
+set breakindent
+set breakindentopt=shift:2
+set cursorline
+set expandtab
+set exrc
+set hidden
+set hlsearch
+set ignorecase
+set includeexpr=substitute(v:fname,'\\.','/','g')
+set linebreak
+set mouse=a
+set noequalalways
+set nolist
+set nostartofline
+set noswapfile
+set number
+set secure
+set shell=$SHELL
+set shiftround
+set shiftwidth=4
+set shortmess+=I
+set showcmd
+set smartcase
+set smartindent
+set spelllang=en_au
+set splitbelow
+set splitright
+set switchbuf=useopen
+set tabstop=4
+set title
+set ttyfast
+set wildmode=list:longest
+set wrap
+set writebackup
+
+let g:netrw_banner = 0
+let g:netrw_browse_split = 4
+let g:netrw_liststyle = 3
+let g:netrw_winsize = 25
+
+augroup indent_two
+    autocmd!
+    autocmd Filetype ruby,eruby,java,yaml,javascript,vue,liquid,scss,json setlocal tabstop=2 shiftwidth=2
+augroup END
+
+augroup ternconfig
+    autocmd!
+    autocmd BufRead,BufNewFile .tern-project set filetype=json
+    autocmd BufRead,BufNewFile .tern-config set filetype=json
+augroup END
+
+augroup vue_syntax
+    autocmd!
+    autocmd Filetype vue syntax sync fromstart
+augroup END
+
+" Load all plugins now. Plugins need to be added to runtimepath before
+" helptags can be generated.
+packloadall
+" Load all of the helptags now, after plugins have been loaded. All messages
+" and errors will be ignored.
+silent! helptags ALL
+
+" search for visually selected text
+vnoremap // y/<C-R>"<CR>
+
+" disable Ex mode
+nnoremap Q <Nop>
+nnoremap gQ <Nop>
+
+" disable adding and subtracting
+nnoremap <C-a> <Nop>
+nnoremap <C-x> <Nop>
+
+" on-demand clang-format
+map <Leader>cff :pyf /usr/local/opt/clang-format/share/clang/clang-format.py<CR>
+
+" copy full path of current buffer to system clipboard
+map <Leader>cfp :let @+ = expand("%:p")
+
+" sort inside indent
+map <Leader>sii vii:sort<CR>
+
+" improve wrapped line nagivation
+map j gj
+map k gk
