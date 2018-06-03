@@ -48,7 +48,7 @@
     l = log --oneline --decorate --graph
     pp = pull --prune
     s = status --untracked-files=all
-    wip = commit -m "WIP"
+    wip = "!git add --all; git commit -m \"WIP\""
 
 [branch]
     autoSetupRebase = always
