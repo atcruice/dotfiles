@@ -76,13 +76,9 @@ Plug 'kana/vim-textobj-user' | Plug 'kana/vim-textobj-indent'
 
 Plug 'tpope/vim-unimpaired'
 
-" brew tap universal-ctags/universal-ctags
-" brew install --HEAD universal-ctags
-" gem install CoffeeTags
-
 Plug 'ludovicchabant/vim-gutentags'
 
-let g:gutentags_cache_dir = '/tmp'
+let g:gutentags_ctags_exclude = ['node_modules']
 
 Plug 'sheerun/vim-polyglot'
 
