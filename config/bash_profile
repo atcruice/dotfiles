@@ -66,6 +66,18 @@ function ruby_version {
     fi
 }
 
+function until_nonzero {
+    local command="$*"
+    local count=0
+
+    while eval "$command"
+    do (( ++count ))
+    done
+
+    display_notification "Failed: $command"
+    echo $count
+}
+
 function set_PS1 {
     if [[ $? == 0 ]]; then
         PS1=$(exit_code_zero)
