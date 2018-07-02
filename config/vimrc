@@ -18,7 +18,7 @@ nnoremap <Leader>a :Ack!<Space>
 nnoremap <Leader>A :AckFromSearch!<CR>
 
 if executable('ag')
-    let g:ackprg = 'ag --nogroup --nocolor --column'
+    let g:ackprg = 'ag --vimgrep'
 endif
 
 Plug 'w0rp/ale'
