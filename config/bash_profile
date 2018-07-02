@@ -50,6 +50,16 @@ function git_branch_dirty {
     echo -e "$YELLOW$branch$dirty "
 }
 
+function display_notification {
+    local text=$1
+    local title=${2:-"Bash"}
+
+    osascript -e 'on run argv' \
+        -e 'display notification (item 1 of argv) with title (item 2 of argv)' \
+        -e 'end run' \
+        "$text" "$title"
+}
+
 function ruby_version {
     if [[ -n $RUBY_VERSION ]]; then
         echo -e "$RED$RUBY_VERSION "
