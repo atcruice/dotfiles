@@ -156,6 +156,11 @@ augroup vue_syntax
     autocmd Filetype vue syntax sync fromstart
 augroup END
 
+augroup git_spell_check
+    autocmd!
+    autocmd FileType gitcommit setlocal spell
+augroup END
+
 " Load all plugins now. Plugins need to be added to runtimepath before
 " helptags can be generated.
 packloadall
