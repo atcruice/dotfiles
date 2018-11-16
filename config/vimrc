@@ -25,6 +25,7 @@ if executable('ag')
 endif
 
 Plug 'w0rp/ale'
+let g:ale_lint_delay = 100
 
 Plug 'ntpeters/vim-better-whitespace'
 
