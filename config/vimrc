@@ -93,6 +93,12 @@ nmap <Leader>tn :TestNearest<CR>
 
 Plug 'lmeijvogel/vim-yaml-helper'
 
+Plug 'FooSoft/vim-argwrap'
+
+let g:argwrap_tail_comma = 1
+
+nnoremap <leader>w :ArgWrap<CR>
+
 call plug#end()
 
 set background=dark
