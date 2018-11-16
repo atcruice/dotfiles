@@ -175,7 +175,7 @@ nnoremap <C-a> <Nop>
 nnoremap <C-x> <Nop>
 
 " copy full path of current buffer to system clipboard
-map <Leader>cfp :let @+ = expand("%:p")
+map <Leader>cfp :let @+ = expand("%:p")<CR>
 
 " sort inside indent
 map <Leader>sii vii:sort<CR>
