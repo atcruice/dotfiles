@@ -49,7 +49,7 @@
     fixup = "!f() { git commit --fixup=$1; }; f"
     l = log --oneline --decorate --graph
     pp = pull --prune
-    s = status --untracked-files=all
+    s = status
     wip = "!git add --all; git commit -m \"WIP\""
 
 [branch]
@@ -57,3 +57,5 @@
 
 [commit]
     gpgsign = true
+[status]
+    showUntrackedFiles = all
