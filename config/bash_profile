@@ -31,7 +31,7 @@ function exit_code_zero {
 }
 
 function gemscrub {
-    gem pristine --all --env-shebang --no-extensions
+    gem pristine --all --env-shebang --no-extensions "$@"
 }
 
 function git_branch_dirty {
