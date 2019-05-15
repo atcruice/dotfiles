@@ -41,10 +41,10 @@ nmap <Leader>f :Files<CR>
 nmap <Leader>m :GitFiles?<CR>
 
 Plug 'airblade/vim-gitgutter'
-let g:gitgutter_map_keys = 0
-nmap [c <Plug>GitGutterPrevHunk
-nmap ]c <Plug>GitGutterNextHunk
-nmap <Leader>gguh <Plug>GitGutterUndoHunk
+" let g:gitgutter_map_keys = 0
+" nmap [c <Plug>GitGutterPrevHunk
+" nmap ]c <Plug>GitGutterNextHunk
+" nmap <Leader>gguh <Plug>GitGutterUndoHunk
 
 Plug 'nanotech/jellybeans.vim'
 
