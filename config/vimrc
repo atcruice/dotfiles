@@ -137,6 +137,7 @@ set switchbuf=useopen
 set tabstop=4
 set title
 set ttyfast
+set updatetime=100
 set wildmode=list:longest
 set wrap
 set writebackup
