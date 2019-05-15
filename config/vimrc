@@ -19,7 +19,11 @@ if executable('ag')
 endif
 
 Plug 'w0rp/ale'
-let g:ale_lint_delay = 100
+let g:ale_cache_executable_check_failures = 1
+let g:ale_fix_on_save = 1
+let g:ale_fixers = {'*': ['remove_trailing_lines', 'trim_whitespace']}
+let g:ale_lint_delay = 200
+let g:ale_sign_column_always = 1
 
 Plug 'ntpeters/vim-better-whitespace'
 
