@@ -1,48 +1,35 @@
 [include]
     path = .gitconfig.local
-
 [color]
     ui = auto
-
 [color "diff"]
     commit = yellow reverse
-
 [push]
     default = tracking
-
 [merge]
     log = true
     conflictstyle = diff3
     tool = vimdiff
-
 [rerere]
     enabled = 1
-
 [diff]
     compactionHeuristic = true
-
 [difftool "vimdiff"]
     cmd = vimdiff $LOCAL $REMOTE
-
 [mergetool]
     prompt = false
-
 [rebase]
     autosquash = true
     autostash = true
-
 [tag]
     sort = version:refname
-
 [user]
     name = Alex Cruice
     email = alex.cruice@gmail.com
     signingkey = B42E15B6B9208755
-
 [core]
     excludesfile = ~/.gitignore_global
     pager = diff-so-fancy | less --tabs=2 -RFX
-
 [alias]
     ap = add --patch
     cm = checkout master
@@ -51,10 +38,8 @@
     pp = pull --prune
     s = status
     wip = "!git add --all; git commit -m \"WIP\""
-
 [branch]
     autoSetupRebase = always
-
 [commit]
     gpgsign = true
 [status]
