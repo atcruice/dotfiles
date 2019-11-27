@@ -37,6 +37,7 @@
     l = log --oneline --decorate --graph
     pp = pull --prune
     s = status
+    unwip = "!f() { [[ $(git log -1 --pretty=%s) == 'WIP' ]] && git reset HEAD^; }; f"
     wip = "!git add --all; git commit -m \"WIP\""
 [branch]
     autoSetupRebase = always
