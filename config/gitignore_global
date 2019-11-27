@@ -102,5 +102,6 @@ Temporary Items
 *.log
 *.sqlite
 
-# direnv
+# Environment variables
 .envrc
+.overmind.env
