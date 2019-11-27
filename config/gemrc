@@ -2,4 +2,6 @@
 
 :update_sources: true
 :backtrace: true
-gem: --no-document --no-rdoc --no-ri
+install: --document ri
+update: --document ri
+rdoc: --ri
