@@ -1,7 +1,7 @@
-# vim: ft=yaml
-
-:update_sources: true
+# vim: filetype=yaml
+---
 :backtrace: true
-install: --document ri
-update: --document ri
-rdoc: --ri
+:update_sources: true
+install: --no-document --env-shebang
+rdoc: --no-rdoc --no-ri
+update: --no-document --env-shebang
