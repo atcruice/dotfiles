@@ -36,6 +36,7 @@ in {
     exercism
     ncdu
     python38Packages.grip
+    ripgrep
     shellcheck
     universal-ctags
     youtube-dl
@@ -44,6 +45,7 @@ in {
   home.file = {
     ".bundle/config".source = ~/.dotfiles/bundle/config;
     ".gemrc".source = ~/.dotfiles/config/gemrc;
+    ".ignore".source = ~/.dotfiles/config/ignore;
     ".inputrc".source = ~/.dotfiles/config/inputrc;
     ".psqlrc".source = ~/.dotfiles/config/psqlrc;
     ".vimrc".source = ~/.dotfiles/config/vimrc;
@@ -69,6 +71,7 @@ in {
       CLICOLOR = "1";
       DISABLE_SPRING = "true";
       EDITOR = "vim";
+      FZF_DEFAULT_COMMAND = "rg --files --hidden --vimgrep";
       GPG_TTY = "$(tty)";
       LESS = "--ignore-case --squeeze-blank-lines --LONG-PROMPT --RAW-CONTROL-CHARS";
       NIX_PATH = "$HOME/.nix-defexpr/channels\${NIX_PATH:+:}$NIX_PATH";

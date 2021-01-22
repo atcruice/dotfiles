@@ -9,15 +9,6 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'zxqfl/tabnine-vim'
 
-Plug 'mileszs/ack.vim'
-cnoreabbrev Ack Ack!
-nnoremap <Leader>a :Ack!<Space>
-nnoremap <Leader>A :AckFromSearch!<CR>
-
-if executable('ag')
-    let g:ackprg = 'ag --vimgrep'
-endif
-
 Plug 'w0rp/ale'
 let g:ale_cache_executable_check_failures = 1
 let g:ale_fix_on_save = 1
