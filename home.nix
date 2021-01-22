@@ -32,6 +32,7 @@ in {
   home.packages = with pkgs; [
     bash-completion
     bashInteractive
+    delta
     exercism
     ncdu
     python38Packages.grip
@@ -89,7 +90,7 @@ in {
       wip = "!git add --all; git commit -m \"WIP\"";
     };
     delta = {
-      enable = false;
+      enable = true;
     };
     extraConfig = {
       branch = {
