@@ -1,6 +1,0 @@
-# vim: set ft=sh:
-
-fresh freshshell/fresh bin/fresh --bin # handles updating fresh
-
-fresh bundle/config --file=~/.bundle/config
-fresh config/\* --file
