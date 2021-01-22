@@ -144,17 +144,6 @@ set writebackup
 
 let g:netrw_liststyle = 3
 
-augroup ternconfig
-    autocmd!
-    autocmd BufRead,BufNewFile .tern-project set filetype=json
-    autocmd BufRead,BufNewFile .tern-config set filetype=json
-augroup END
-
-augroup vue_syntax
-    autocmd!
-    autocmd Filetype vue syntax sync fromstart
-augroup END
-
 augroup git_spell_check
     autocmd!
     autocmd FileType gitcommit setlocal spell
