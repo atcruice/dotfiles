@@ -71,13 +71,17 @@ in {
       CLICOLOR = "1";
       DISABLE_SPRING = "true";
       EDITOR = "vim";
-      FZF_DEFAULT_COMMAND = "rg --files --hidden --vimgrep";
       GPG_TTY = "$(tty)";
       LESS = "--ignore-case --squeeze-blank-lines --LONG-PROMPT --RAW-CONTROL-CHARS";
       NIX_PATH = "$HOME/.nix-defexpr/channels\${NIX_PATH:+:}$NIX_PATH";
       PAGER = "less";
       PATH = "$PATH:$HOME/bin";
     };
+  };
+
+  programs.fzf = {
+    defaultCommand = "rg --files --hidden --vimgrep";
+    enable = true;
   };
 
   programs.git = {
