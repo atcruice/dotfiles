@@ -77,6 +77,10 @@ in {
   # changes in each release.
   home.stateVersion = "21.03";
 
+  home.sessionPath = [
+    "$HOME/bin"
+  ];
+
   home.packages = with pkgs; [
     bash-completion
     bashInteractive
@@ -132,7 +136,6 @@ in {
       LESS = "--ignore-case --squeeze-blank-lines --LONG-PROMPT --RAW-CONTROL-CHARS";
       NIX_PATH = "$HOME/.nix-defexpr/channels\${NIX_PATH:+:}$NIX_PATH";
       PAGER = "less";
-      PATH = "$PATH:$HOME/bin";
     };
   };
 
