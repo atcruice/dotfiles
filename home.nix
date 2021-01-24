@@ -87,7 +87,7 @@ in {
     delta
     exercism
     ncdu
-    python38Packages.grip
+    python39Packages.grip
     ripgrep
     shellcheck
     universal-ctags
