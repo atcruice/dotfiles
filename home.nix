@@ -5,10 +5,58 @@ let
     ref = "refs/tags/v0.2.3";
     url = "https://github.com/mrzool/bash-sensible";
   };
+
+  concatDir = dirname: pkgs.lib.pipe dirname [
+    builtins.readDir
+    (pkgs.lib.filterAttrs (_: v: v == "regular"))
+    (pkgs.lib.mapAttrsToList (k: _: k))
+    (pkgs.lib.concatMapStrings (basename: builtins.readFile (dirname + "/${basename}")))
+  ];
+
   githubGitignore = builtins.fetchGit {
     ref = "master";
     rev = "218a941be92679ce67d0484547e3e142b2f5f6f0"; # 2020-07-13
     url = "https://github.com/github/gitignore";
+  };
+
+  tabnine-vim = pkgs.vimUtils.buildVimPlugin {
+    name = "tabnine-vim";
+    src = pkgs.fetchFromGitHub {
+      owner = "codota";
+      repo = "tabnine-vim";
+      rev = "2.10.0";
+      sha256 = "0cra1l31fcngp3iyn61rlngz4qx7zwk68h07bgp9w5gjx59a7npz";
+    };
+  };
+
+  vim-argwrap = pkgs.vimUtils.buildVimPlugin {
+    name = "vim-argwrap";
+    src = pkgs.fetchFromGitHub {
+      owner = "FooSoft";
+      repo = "vim-argwrap";
+      rev = "f3d122d9b167ea9489aad8d99c278fe4f3f4e951"; # 2020-06-27
+      sha256 = "15qjffkb2vv64ma0wpay6pi9ji3zplrz0zvvywq93jmqcf8iqn6c";
+    };
+  };
+
+  vim-textobj-indent = pkgs.vimUtils.buildVimPlugin {
+    name = "vim-textobj-indent";
+    src = pkgs.fetchFromGitHub {
+      owner = "kana";
+      repo = "vim-textobj-indent";
+      rev = "0.0.6";
+      sha256 = "0m7v8iq09x0khp2li563q8pbywa3dr3zw538cz54cfl8dwyd8p50";
+    };
+  };
+
+  vim-yaml-helper = pkgs.vimUtils.buildVimPlugin {
+    name = "vim-yaml-helper";
+    src = pkgs.fetchFromGitHub {
+      owner = "lmeijvogel";
+      repo = "vim-yaml-helper";
+      rev = "403ff568e336def133b55d25a3f9517f406054cc"; # 2020-03-12
+      sha256 = "038f29hkq0xi60jyxmciszd1ssjkinc3zqhp25a2qk08qsigyg9f";
+    };
   };
 in {
   # Let Home Manager install and manage itself.
@@ -39,6 +87,8 @@ in {
     ripgrep
     shellcheck
     universal-ctags
+    vim-vint
+    yamllint
     youtube-dl
   ];
 
@@ -48,7 +98,14 @@ in {
     ".ignore".source = ~/.dotfiles/config/ignore;
     ".inputrc".source = ~/.dotfiles/config/inputrc;
     ".psqlrc".source = ~/.dotfiles/config/psqlrc;
-    ".vimrc".source = ~/.dotfiles/config/vimrc;
+  };
+
+  nixpkgs.config = {
+    vim = {
+      darwin = true;
+      gui = "no";
+      perl = true;
+    };
   };
 
   programs.direnv = {
@@ -170,6 +227,64 @@ in {
         identityFile = "~/.ssh/alex_buildkite";
         user = "alex";
       };
+    };
+  };
+
+  programs.vim = {
+    enable = true;
+    extraConfig = ''
+      scriptencoding utf-8
+      ${concatDir ~/.dotfiles/programs/vim/plugins}
+      ${builtins.readFile ~/.dotfiles/programs/vim/settings.vim}
+      ${builtins.readFile ~/.dotfiles/programs/vim/mappings.vim}
+    '';
+    plugins = with pkgs.vimPlugins; [
+      ale
+      emmet-vim
+      fzf-vim
+      jellybeans-vim
+      lightline-vim
+      splitjoin-vim
+      tabnine-vim
+      tcomment_vim
+      vim-argwrap
+      vim-eunuch
+      vim-fugitive
+      vim-gitgutter
+      vim-gutentags
+      vim-liquid
+      vim-move
+      vim-polyglot
+      vim-rails
+      vim-sensible
+      vim-surround
+      vim-test
+      vim-textobj-indent
+      vim-textobj-user
+      vim-unimpaired
+      vim-yaml-helper
+    ];
+    settings = {
+      background = "dark";
+      # backupdir = [];
+      copyindent = false;
+      # directory = [];
+      expandtab = true;
+      hidden = true;
+      history = 1000;
+      ignorecase = true;
+      modeline = true;
+      mouse = "a";
+      mousefocus = false;
+      mousehide = true;
+      mousemodel = "extend";
+      number = true;
+      relativenumber = false;
+      shiftwidth = 0;
+      smartcase = true;
+      tabstop = 2;
+      # undodir = [];
+      undofile = false;
     };
   };
 }
