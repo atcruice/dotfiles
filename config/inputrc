@@ -2,11 +2,15 @@ set completion-ignore-case on
 set convert-meta off
 set editing-mode vi
 set input-meta on
+set keyseq-timeout 300
 set mark-symlinked-directories on
 set output-meta on
 set show-all-if-ambiguous on
 set show-all-if-unmodified on
+set show-mode-in-prompt on
 set skip-completed-text on
+set vi-cmd-mode-string "NOR "
+set vi-ins-mode-string "INS "
 
 # do ! history expansion when space entered
 $if Bash
