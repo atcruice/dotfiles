@@ -19,12 +19,8 @@ $endif
 
 # bindup/down and k/j to history search instead of history navigation
 # text between start and cursor used as search prefix
-$if ruby
-  # TODO: deal with iTerm's arrow key oddness
-$else
-  "\e[A": history-search-backward
-  "\e[B": history-search-forward
-$endif
+"\e[A": history-search-backward
+"\e[B": history-search-forward
 
 set keymap vi-command
 "k": history-search-backward
