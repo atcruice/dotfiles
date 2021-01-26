@@ -1,6 +1,8 @@
 set completion-ignore-case on
+set completion-map-case on
 set convert-meta off
 set editing-mode vi
+set enable-bracketed-paste on
 set input-meta on
 set keyseq-timeout 300
 set mark-symlinked-directories on
