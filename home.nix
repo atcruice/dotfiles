@@ -127,6 +127,7 @@ in {
       stty sane
       stty -ixon iutf8
       . "$HOME/.nix-profile/share/bash-completion/bash_completion"
+      . "$HOME/.nix-profile/share/git/contrib/completion/git-completion.bash"
     '';
     sessionVariables = {
       CLICOLOR = "1";
