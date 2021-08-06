@@ -21,6 +21,10 @@ gemscrub() (
     gem pristine --all --env-shebang --no-extensions --skip=bundler "$@"
 )
 
+rebundle() (
+    bundle && bundle clean --force && bundle pristine && display_notification "Rebundled!"
+)
+
 until_nonzero() (
     command="$*"
     count=0
