@@ -52,10 +52,10 @@ let
   vim-yaml-helper = pkgs.vimUtils.buildVimPlugin {
     name = "vim-yaml-helper";
     src = pkgs.fetchFromGitHub {
-      owner = "lmeijvogel";
+      owner = "henrik";
       repo = "vim-yaml-helper";
-      rev = "403ff568e336def133b55d25a3f9517f406054cc"; # 2020-03-12
-      sha256 = "038f29hkq0xi60jyxmciszd1ssjkinc3zqhp25a2qk08qsigyg9f";
+      rev = "4090c9f1bfee054283d1fe26bf9e9b1781ff1465"; # 2016-05-27
+      sha256 = "1kfl8ni20jcvnjgw89jq9fj1ck7k4c4ycn2pnq8z39gg99ixsj9z";
     };
   };
 in {
