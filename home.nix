@@ -207,6 +207,7 @@ in {
       ${builtins.readFile (githubGitignore + "/community/OpenSSL.gitignore")}
       *.ctags
       .direnv
+      tags.*
     '';
     signing = {
       gpgPath = "/usr/local/MacGPG2/bin/gpg2";
