@@ -91,6 +91,7 @@ in {
     python39Packages.grip
     ripgrep
     shellcheck
+    siege
     universal-ctags
     vim-vint
     yamllint
