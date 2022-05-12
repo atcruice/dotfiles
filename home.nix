@@ -93,6 +93,7 @@ in {
     shellcheck
     siege
     universal-ctags
+    unixtools.watch
     vim-vint
     yamllint
     youtube-dl
