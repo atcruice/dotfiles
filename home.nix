@@ -87,6 +87,7 @@ in {
     delta
     exercism
     ncdu
+    nmap
     python39Packages.grip
     ripgrep
     shellcheck
