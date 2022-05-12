@@ -149,7 +149,7 @@ in {
     enable = true;
     aliases = {
       ap = "add --patch";
-      cm = "checkout master";
+      cm = "checkout main";
       fixup = "!f() { git commit --fixup=$1; }; f";
       l = "log --oneline --decorate --graph";
       pp = "pull --prune";
