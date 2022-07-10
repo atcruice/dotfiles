@@ -102,6 +102,7 @@ in {
   home.file = {
     ".bundle/config".source = ~/.dotfiles/bundle/config;
     ".config/nix/nix.conf".source = ~/.dotfiles/config/nix.conf;
+    ".config/yamllint/config".source = ~/.dotfiles/config/yamllint.yml;
     ".gemrc".source = ~/.dotfiles/config/gemrc;
     ".ignore".source = ~/.dotfiles/config/ignore;
     ".inputrc".source = ~/.dotfiles/config/inputrc;
