@@ -34,7 +34,7 @@ let
     src = pkgs.fetchFromGitHub {
       owner = "FooSoft";
       repo = "vim-argwrap";
-      rev = "f3d122d9b167ea9489aad8d99c278fe4f3f4e951"; # 2020-06-27
+      rev = "0faba07179f96cae2ab49cf2cc22ebeb922c1532"; # 2022-02-08
       sha256 = "15qjffkb2vv64ma0wpay6pi9ji3zplrz0zvvywq93jmqcf8iqn6c";
     };
   };
