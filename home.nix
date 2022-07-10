@@ -111,7 +111,7 @@ in {
 
   nixpkgs.config = {
     vim = {
-      darwin = true;
+      darwin = pkgs.stdenv.isDarwin;
       gui = "no";
       perl = true;
     };
