@@ -15,7 +15,7 @@ let
 
   githubGitignore = builtins.fetchGit {
     ref = "main";
-    rev = "218a941be92679ce67d0484547e3e142b2f5f6f0"; # 2020-07-13
+    rev = "e5323759e387ba347a9d50f8b0ddd16502eb71d4"; # 2022-05-11
     url = "https://github.com/github/gitignore";
   };
 
