@@ -25,6 +25,10 @@ rebundle() (
     bundle && bundle clean --force && bundle pristine && display_notification "Rebundled!"
 )
 
+ssh_ci() (
+  ssh -i ~/.ssh/alex_buildkite -l alex "$@"
+)
+
 until_nonzero() (
     command="$*"
     count=0
