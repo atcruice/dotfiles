@@ -88,7 +88,7 @@ in {
     exercism
     ncdu
     nmap
-    python39Packages.grip
+    python310Packages.grip
     ripgrep
     shellcheck
     siege
