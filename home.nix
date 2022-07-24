@@ -47,7 +47,7 @@ let
       owner = "FooSoft";
       repo = "vim-argwrap";
       rev = "0faba07179f96cae2ab49cf2cc22ebeb922c1532"; # 2022-02-08
-      sha256 = "15qjffkb2vv64ma0wpay6pi9ji3zplrz0zvvywq93jmqcf8iqn6c";
+      sha256 = "xC2LNKIvFTeSYZspigPH7PTdpVWpR7n+xa8IHK7MYdE=";
     };
   };
 
@@ -57,7 +57,7 @@ let
       owner = "kana";
       repo = "vim-textobj-indent";
       rev = "0.0.6";
-      sha256 = "0m7v8iq09x0khp2li563q8pbywa3dr3zw538cz54cfl8dwyd8p50";
+      sha256 = "oFzUPG+IOkbKZ2gU/kduQ3G/LsLDlEjFhRP0BHBE+1Q=";
     };
   };
 
@@ -67,7 +67,7 @@ let
       owner = "henrik";
       repo = "vim-yaml-helper";
       rev = "4090c9f1bfee054283d1fe26bf9e9b1781ff1465"; # 2016-05-27
-      sha256 = "1kfl8ni20jcvnjgw89jq9fj1ck7k4c4ycn2pnq8z39gg99ixsj9z";
+      sha256 = "P0ndY0rvpfERtldY5gkj80wWpEtYJsSftJtJIKJF1M0=";
     };
   };
 in {
