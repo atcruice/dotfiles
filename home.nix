@@ -42,17 +42,19 @@ let
   };
 
   vim-argwrap = pkgs.vimUtils.buildVimPlugin {
-    name = "vim-argwrap";
+    pname = "vim-argwrap";
+    version = "2022-07-15";
     src = pkgs.fetchFromGitHub {
       owner = "FooSoft";
       repo = "vim-argwrap";
-      rev = "0faba07179f96cae2ab49cf2cc22ebeb922c1532"; # 2022-02-08
+      rev = "feaba6b8b6ca099d267c81ee2c4ba43ce6de8499";
       sha256 = "xC2LNKIvFTeSYZspigPH7PTdpVWpR7n+xa8IHK7MYdE=";
     };
   };
 
   vim-textobj-indent = pkgs.vimUtils.buildVimPlugin {
-    name = "vim-textobj-indent";
+    pname = "vim-textobj-indent";
+    version = "0.0.6";
     src = pkgs.fetchFromGitHub {
       owner = "kana";
       repo = "vim-textobj-indent";
@@ -62,11 +64,12 @@ let
   };
 
   vim-yaml-helper = pkgs.vimUtils.buildVimPlugin {
-    name = "vim-yaml-helper";
+    pname = "vim-yaml-helper";
+    version = "2016-05-27";
     src = pkgs.fetchFromGitHub {
       owner = "henrik";
       repo = "vim-yaml-helper";
-      rev = "4090c9f1bfee054283d1fe26bf9e9b1781ff1465"; # 2016-05-27
+      rev = "4090c9f1bfee054283d1fe26bf9e9b1781ff1465";
       sha256 = "P0ndY0rvpfERtldY5gkj80wWpEtYJsSftJtJIKJF1M0=";
     };
   };
