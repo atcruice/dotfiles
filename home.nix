@@ -102,6 +102,7 @@ in {
     delta
     exercism
     ncdu
+    niv
     nmap
     python310Packages.grip
     ripgrep
