@@ -21,13 +21,13 @@ let
 
   tabnine-YouCompleteMe = pkgs.vimUtils.buildVimPluginFrom2Nix {
     pname = "tabnine-YouCompleteMe";
-    version = "2022-04-03";
+    version = "2022-09-28";
     src = pkgs.fetchFromGitHub {
       fetchSubmodules = true;
       owner = "tabnine";
       repo = "YouCompleteMe";
-      rev = "c4e5036366ffd54251deb03087a02a98c70dfb77";
-      sha256 = "yd6BvffNPum0NuoOxCpy7EJdgA2eMcgpo89PC1FTJiQ=";
+      rev = "cf2bb6e27e941a6232aa412f9ff2e83f023dce4e";
+      sha256 = "7JOyUInPGriwLMARZ51qcec69CsBQTJo+RDfc139ILs=";
     };
     buildInputs = [
       pkgs.cacert
