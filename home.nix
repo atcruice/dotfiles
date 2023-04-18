@@ -104,6 +104,7 @@ in {
     ncdu
     niv
     nmap
+    overmind
     python310Packages.grip
     ripgrep
     shellcheck
@@ -118,6 +119,7 @@ in {
   home.file = {
     ".bundle/config".source = ~/.dotfiles/bundle/config;
     ".config/nix/nix.conf".source = ~/.dotfiles/config/nix.conf;
+    ".config/tmux/tmux.conf".source = ~/.dotfiles/config/tmux.conf;
     ".config/yamllint/config".source = ~/.dotfiles/config/yamllint.yml;
     ".gemrc".source = ~/.dotfiles/config/gemrc;
     ".ignore".source = ~/.dotfiles/config/ignore;
