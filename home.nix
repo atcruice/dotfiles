@@ -193,12 +193,18 @@ in {
       diff = {
         compactionHeuristic = true;
       };
+      init = {
+        defaultBranch = "main";
+      };
       merge = {
         conflictstyle = "diff3";
         log = true;
       };
       mergetool = {
         prompt = false;
+      };
+      push = {
+        autoSetupRemote = true;
       };
       rebase = {
         autosquash = true;
