@@ -257,11 +257,6 @@ in {
     '';
     hashKnownHosts = false;
     matchBlocks = {
-      "buildkite" = {
-        host = "ci-*";
-        identityFile = "~/.ssh/alex_buildkite";
-        user = "alex";
-      };
     };
   };
 
