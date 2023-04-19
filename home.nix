@@ -99,7 +99,9 @@ in {
   home.packages = with pkgs; [
     bash-completion
     bashInteractive
+    colima
     delta
+    docker
     exercism
     ncdu
     niv
