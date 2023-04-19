@@ -241,7 +241,6 @@ in {
       tags.*
     '';
     signing = {
-      gpgPath = "/usr/local/MacGPG2/bin/gpg2";
       key = "B42E15B6B9208755";
       signByDefault = true;
     };
