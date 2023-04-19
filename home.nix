@@ -128,6 +128,15 @@ in {
     ".inputrc".source = ~/.dotfiles/config/inputrc;
     ".psqlrc".source = ~/.dotfiles/config/psqlrc;
   };
+  home.sessionVariables = {
+    CLICOLOR = "1";
+    DISABLE_SPRING = "true";
+    EDITOR = "vim";
+    GPG_TTY = "$(tty)";
+    LESS = "--ignore-case --squeeze-blank-lines --LONG-PROMPT --RAW-CONTROL-CHARS";
+    NIX_PATH = "$HOME/.nix-defexpr/channels:/nix/var/nix/profiles/per-user/root/channels\${NIX_PATH:+:$NIX_PATH}";
+    PAGER = "less";
+  };
 
   nixpkgs.config = {
     vim = {
@@ -154,15 +163,6 @@ in {
       . "$HOME/.nix-profile/share/bash-completion/bash_completion"
       . "$HOME/.nix-profile/share/git/contrib/completion/git-completion.bash"
     '';
-    sessionVariables = {
-      CLICOLOR = "1";
-      DISABLE_SPRING = "true";
-      EDITOR = "vim";
-      GPG_TTY = "$(tty)";
-      LESS = "--ignore-case --squeeze-blank-lines --LONG-PROMPT --RAW-CONTROL-CHARS";
-      NIX_PATH = "$HOME/.nix-defexpr/channels:/nix/var/nix/profiles/per-user/root/channels\${NIX_PATH:+:$NIX_PATH}";
-      PAGER = "less";
-    };
   };
 
   programs.fzf = {
