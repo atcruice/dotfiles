@@ -118,6 +118,7 @@ in {
     youtube-dl
   ];
 
+  home.enableNixpkgsReleaseCheck = true;
   home.file = {
     ".bundle/config".source = ~/.dotfiles/bundle/config;
     ".config/nix/nix.conf".source = ~/.dotfiles/config/nix.conf;
