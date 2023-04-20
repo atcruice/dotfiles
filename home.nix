@@ -118,6 +118,12 @@ in {
     youtube-dl
   ];
 
+  home.activation = pkgs.lib.optionalAttrs pkgs.stdenv.isDarwin {
+    impureAction = config.lib.dag.entryAfter ["writeBoundary"] ''
+      $DRY_RUN_CMD mkdir -p $VERBOSE_ARG $HOME/.1password
+      $DRY_RUN_CMD ln -fs $VERBOSE_ARG $HOME/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock $HOME/.1password/agent.sock
+    '';
+  };
   home.enableNixpkgsReleaseCheck = true;
   home.file = {
     ".bundle/config".source = ~/.dotfiles/bundle/config;
@@ -137,6 +143,7 @@ in {
     LESS = "--ignore-case --squeeze-blank-lines --LONG-PROMPT --RAW-CONTROL-CHARS";
     NIX_PATH = "$HOME/.nix-defexpr/channels:/nix/var/nix/profiles/per-user/root/channels\${NIX_PATH:+:$NIX_PATH}";
     PAGER = "less";
+    SSH_AUTH_SOCK = "$HOME/.1password/agent.sock";
   };
 
   nixpkgs.config = {
@@ -242,7 +249,7 @@ in {
       tags.*
     '';
     signing = {
-      key = "B42E15B6B9208755";
+      key = null;
       signByDefault = true;
     };
     userEmail = "alex.cruice@gmail.com";
@@ -253,12 +260,11 @@ in {
     enable = true;
     extraConfig = ''
       AddKeysToAgent yes
+      IdentityAgent ~/.1password/agent.sock
       IgnoreUnknown UseKeychain
       UseKeychain yes
     '';
     hashKnownHosts = false;
-    matchBlocks = {
-    };
   };
 
   programs.vim = {
