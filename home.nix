@@ -115,7 +115,7 @@ in {
     unixtools.watch
     vim-vint
     yamllint
-    youtube-dl
+    yt-dlp
   ];
 
   home.activation = pkgs.lib.optionalAttrs pkgs.stdenv.isDarwin {
