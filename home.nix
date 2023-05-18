@@ -109,6 +109,7 @@ in {
     overmind
     python310Packages.grip
     ripgrep
+    ruby_2_7
     shellcheck
     siege
     universal-ctags
