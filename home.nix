@@ -101,6 +101,7 @@ in {
     bashInteractive
     colima
     delta
+    dict
     docker
     exercism
     ncdu
@@ -131,6 +132,7 @@ in {
     ".config/nix/nix.conf".source = ~/.dotfiles/config/nix.conf;
     ".config/tmux/tmux.conf".source = ~/.dotfiles/config/tmux.conf;
     ".config/yamllint/config".source = ~/.dotfiles/config/yamllint.yml;
+    ".dictrc".source = ~/.dotfiles/config/dictrc;
     ".gemrc".source = ~/.dotfiles/config/gemrc;
     ".ignore".source = ~/.dotfiles/config/ignore;
     ".inputrc".source = ~/.dotfiles/config/inputrc;
