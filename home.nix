@@ -129,6 +129,13 @@ in {
   home.enableNixpkgsReleaseCheck = true;
   home.file = {
     ".bundle/config".source = ~/.dotfiles/bundle/config;
+    ".config/autostart/gnome-keyring-ssh.desktop" = {
+      enable = pkgs.stdenv.isLinux;
+      text = ''
+        ${builtins.readFile /etc/xdg/autostart/gnome-keyring-ssh.desktop}
+        Hidden=true
+      '';
+    };
     ".config/nix/nix.conf".source = ~/.dotfiles/config/nix.conf;
     ".config/tmux/tmux.conf".source = ~/.dotfiles/config/tmux.conf;
     ".config/yamllint/config".source = ~/.dotfiles/config/yamllint.yml;
