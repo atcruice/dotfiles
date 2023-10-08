@@ -19,7 +19,7 @@ let
     url = "https://github.com/github/gitignore";
   };
 
-  tabnine-YouCompleteMe = pkgs.vimUtils.buildVimPluginFrom2Nix {
+  tabnine-YouCompleteMe = pkgs.vimUtils.buildVimPlugin {
     pname = "tabnine-YouCompleteMe";
     version = "2022-09-28";
     src = pkgs.fetchFromGitHub {
