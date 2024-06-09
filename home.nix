@@ -19,28 +19,6 @@ let
     url = "https://github.com/github/gitignore";
   };
 
-  tabnine-YouCompleteMe = pkgs.vimUtils.buildVimPlugin {
-    pname = "tabnine-YouCompleteMe";
-    version = "2022-09-28";
-    src = pkgs.fetchFromGitHub {
-      fetchSubmodules = true;
-      owner = "tabnine";
-      repo = "YouCompleteMe";
-      rev = "cf2bb6e27e941a6232aa412f9ff2e83f023dce4e";
-      sha256 = "7JOyUInPGriwLMARZ51qcec69CsBQTJo+RDfc139ILs=";
-    };
-    buildInputs = [
-      pkgs.cacert
-      pkgs.cmake
-      pkgs.git
-      pkgs.python3Full
-    ];
-    postInstall = ''
-      $out/install.py
-      PYTHONPATH=$out python3 -c 'import sys; sys.path.remove(""); from third_party.ycmd.third_party.tabnine import Tabnine; Tabnine()'
-    '';
-  };
-
   vim-argwrap = pkgs.vimUtils.buildVimPlugin {
     pname = "vim-argwrap";
     version = "2022-07-15";
@@ -285,7 +263,6 @@ in {
       jellybeans-vim
       lightline-vim
       splitjoin-vim
-      tabnine-YouCompleteMe
       tcomment_vim
       vim-argwrap
       vim-eunuch
