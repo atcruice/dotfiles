@@ -141,7 +141,6 @@ in {
     EDITOR = "vim";
     GPG_TTY = "$(tty)";
     LESS = "--ignore-case --squeeze-blank-lines --LONG-PROMPT --RAW-CONTROL-CHARS";
-    NIX_PATH = "$HOME/.nix-defexpr/channels:/nix/var/nix/profiles/per-user/root/channels\${NIX_PATH:+:$NIX_PATH}";
     PAGER = "less";
     SSH_AUTH_SOCK = "$HOME/.1password/agent.sock";
   };
