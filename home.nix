@@ -127,7 +127,6 @@ in {
   };
   home.enableNixpkgsReleaseCheck = true;
   home.file = {
-    ".bundle/config".source = ~/.dotfiles/bundle/config;
     ".config/nix/nix.conf".source = ~/.dotfiles/config/nix.conf;
     ".config/tmux/tmux.conf".source = ~/.dotfiles/config/tmux.conf;
     ".config/yamllint/config".source = ~/.dotfiles/config/yamllint.yml;
