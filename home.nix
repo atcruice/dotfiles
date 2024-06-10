@@ -81,7 +81,7 @@ in {
     delta
     docker
     exercism
-    ncdu
+    ncdu_1
     niv
     nmap
     overmind
