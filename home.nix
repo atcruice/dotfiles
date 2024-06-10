@@ -89,7 +89,6 @@ in {
     ripgrep
     ruby
     shellcheck
-    siege
     universal-ctags
     unixtools.watch
     vim-vint
