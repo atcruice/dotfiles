@@ -85,7 +85,7 @@ in {
     niv
     nmap
     overmind
-    python310Packages.grip
+    python312Packages.grip
     ripgrep
     ruby
     shellcheck
