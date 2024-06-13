@@ -86,7 +86,7 @@ in {
     overmind
     python312Packages.grip
     ripgrep
-    ruby
+    ruby_3_3
     shellcheck
     universal-ctags
     unixtools.watch
