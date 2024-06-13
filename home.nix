@@ -21,12 +21,11 @@ let
 
   vim-argwrap = pkgs.vimUtils.buildVimPlugin {
     pname = "vim-argwrap";
-    version = "2022-07-15";
-    src = pkgs.fetchFromGitHub {
-      owner = "FooSoft";
-      repo = "vim-argwrap";
-      rev = "feaba6b8b6ca099d267c81ee2c4ba43ce6de8499";
-      sha256 = "xC2LNKIvFTeSYZspigPH7PTdpVWpR7n+xa8IHK7MYdE=";
+    version = "24.1.15.0";
+    src = pkgs.fetchgit {
+      hash = "sha256-AJdL25fSwTeQJdS8tTWaIiQ0B661jPCbV8CIRGDeofw=";
+      rev = "refs/tags/24.1.15.0";
+      url = "https://git.foosoft.net/alex/vim-argwrap.git";
     };
   };
 
