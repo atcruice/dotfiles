@@ -279,27 +279,5 @@ in {
       vim-unimpaired
       vim-yaml-helper
     ];
-    settings = {
-      background = "dark";
-      # backupdir = [];
-      copyindent = false;
-      # directory = [];
-      expandtab = true;
-      hidden = true;
-      history = 1000;
-      ignorecase = true;
-      modeline = true;
-      mouse = "a";
-      mousefocus = false;
-      mousehide = true;
-      mousemodel = "extend";
-      number = true;
-      relativenumber = false;
-      shiftwidth = 0;
-      smartcase = true;
-      tabstop = 2;
-      # undodir = [];
-      undofile = false;
-    };
   };
 }
