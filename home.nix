@@ -114,7 +114,6 @@ in {
   home.sessionVariables = {
     CLICOLOR = "1";
     DISABLE_SPRING = "true";
-    EDITOR = "vim";
     GPG_TTY = "$(tty)";
     LESS = "--ignore-case --squeeze-blank-lines --LONG-PROMPT --RAW-CONTROL-CHARS";
     PAGER = "less";
@@ -246,7 +245,9 @@ in {
     hashKnownHosts = false;
   };
 
-  programs.vim = {
+  programs.neovim = {
+    coc.enable = true;
+    defaultEditor = true;
     enable = true;
     extraConfig = ''
       scriptencoding utf-8
@@ -256,7 +257,6 @@ in {
     '';
     plugins = with pkgs.vimPlugins; [
       ale
-      emmet-vim
       fzf-vim
       jellybeans-vim
       lightline-vim
@@ -279,5 +279,8 @@ in {
       vim-unimpaired
       vim-yaml-helper
     ];
+    viAlias = true;
+    vimAlias = true;
+    vimdiffAlias = true;
   };
 }
