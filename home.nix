@@ -113,6 +113,7 @@ in {
   };
   home.sessionVariables = {
     CLICOLOR = "1";
+    DIRENV_WARN_TIMEOUT = "0";
     DISABLE_SPRING = "true";
     GPG_TTY = "$(tty)";
     LESS = "--ignore-case --squeeze-blank-lines --LONG-PROMPT --RAW-CONTROL-CHARS";
