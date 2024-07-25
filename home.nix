@@ -80,6 +80,7 @@ in {
     delta
     docker
     exercism
+    flyctl
     ncdu_1
     niv
     nmap
