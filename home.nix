@@ -104,7 +104,6 @@ in {
   };
   home.enableNixpkgsReleaseCheck = true;
   home.file = {
-    ".config/nix/nix.conf".source = ./config/nix.conf;
     ".config/tmux/tmux.conf".source = ./config/tmux.conf;
     ".config/yamllint/config".source = ./config/yamllint.yml;
     ".gemrc".source = ./config/gemrc;
