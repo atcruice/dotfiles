@@ -104,13 +104,13 @@ in {
   };
   home.enableNixpkgsReleaseCheck = true;
   home.file = {
-    ".config/nix/nix.conf".source = ~/.dotfiles/config/nix.conf;
-    ".config/tmux/tmux.conf".source = ~/.dotfiles/config/tmux.conf;
-    ".config/yamllint/config".source = ~/.dotfiles/config/yamllint.yml;
-    ".gemrc".source = ~/.dotfiles/config/gemrc;
-    ".ignore".source = ~/.dotfiles/config/ignore;
-    ".inputrc".source = ~/.dotfiles/config/inputrc;
-    ".psqlrc".source = ~/.dotfiles/config/psqlrc;
+    ".config/nix/nix.conf".source = ./config/nix.conf;
+    ".config/tmux/tmux.conf".source = ./config/tmux.conf;
+    ".config/yamllint/config".source = ./config/yamllint.yml;
+    ".gemrc".source = ./config/gemrc;
+    ".ignore".source = ./config/ignore;
+    ".inputrc".source = ./config/inputrc;
+    ".psqlrc".source = ./config/psqlrc;
   };
   home.sessionVariables = {
     CLICOLOR = "1";
@@ -140,9 +140,9 @@ in {
     enable = true;
     initExtra = ''
       ${builtins.readFile (bashSensible + "/sensible.bash")}
-      ${builtins.readFile ~/.dotfiles/programs/bash/sensible_overrides.sh}
-      ${builtins.readFile ~/.dotfiles/programs/bash/functions.sh}
-      ${builtins.readFile ~/.dotfiles/programs/bash/prompt.sh}
+      ${builtins.readFile ./programs/bash/sensible_overrides.sh}
+      ${builtins.readFile ./programs/bash/functions.sh}
+      ${builtins.readFile ./programs/bash/prompt.sh}
       stty sane
       stty -ixon iutf8
       . "$HOME/.nix-profile/share/bash-completion/bash_completion"
@@ -253,9 +253,9 @@ in {
     enable = true;
     extraConfig = ''
       scriptencoding utf-8
-      ${concatDir ~/.dotfiles/programs/vim/plugins}
-      ${builtins.readFile ~/.dotfiles/programs/vim/settings.vim}
-      ${builtins.readFile ~/.dotfiles/programs/vim/mappings.vim}
+      ${concatDir ./programs/vim/plugins}
+      ${builtins.readFile ./programs/vim/settings.vim}
+      ${builtins.readFile ./programs/vim/mappings.vim}
     '';
     plugins = with pkgs.vimPlugins; [
       ale
