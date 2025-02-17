@@ -25,7 +25,7 @@ let
     src = pkgs.fetchgit {
       hash = "sha256-AJdL25fSwTeQJdS8tTWaIiQ0B661jPCbV8CIRGDeofw=";
       rev = "refs/tags/24.1.15.0";
-      url = "https://git.foosoft.net/alex/vim-argwrap.git";
+      url = "https://git.sr.ht/~foosoft/vim-argwrap";
     };
   };
 
