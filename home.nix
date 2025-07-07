@@ -84,6 +84,7 @@ in {
     niv
     nmap
     overmind
+    pgformatter
     python312Packages.grip
     ripgrep
     rmlint
