@@ -110,6 +110,7 @@ in {
     ".gemrc".source = ./config/gemrc;
     ".ignore".source = ./config/ignore;
     ".inputrc".source = ./config/inputrc;
+    ".pg_format".source = ./config/pg_format;
     ".psqlrc".source = ./config/psqlrc;
   };
   home.sessionVariables = {
