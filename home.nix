@@ -239,13 +239,19 @@ in {
 
   programs.ssh = {
     enable = true;
-    extraConfig = ''
-      AddKeysToAgent yes
-      IdentityAgent ~/.1password/agent.sock
-      IgnoreUnknown UseKeychain
-      UseKeychain yes
-    '';
-    hashKnownHosts = false;
+    enableDefaultConfig = false;
+
+    matchBlocks = {
+      "*" = {
+        addKeysToAgent = "yes";
+        extraOptions = {
+          IgnoreUnknown = "UseKeychain";
+          UseKeychain = "yes";
+        };
+        hashKnownHosts = false;
+        identityAgent = "~/.1password/agent.sock";
+      };
+    };
   };
 
   programs.neovim = {
