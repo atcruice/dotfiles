@@ -151,6 +151,11 @@ in {
     '';
   };
 
+  programs.delta = {
+    enable = true;
+    enableGitIntegration = true;
+  };
+
   programs.fzf = {
     defaultCommand = "rg --files --hidden --vimgrep";
     enable = true;
@@ -158,20 +163,17 @@ in {
 
   programs.git = {
     enable = true;
-    aliases = {
-      ap = "add --patch";
-      cm = "checkout main";
-      fixup = "!f() { git commit --fixup=$1; }; f";
-      l = "log --oneline --decorate --graph";
-      pp = "pull --prune";
-      s = "status";
-      unwip = "!f() { [[ $(git log -1 --pretty=%s) == 'WIP' ]] && git reset HEAD^; }; f";
-      wip = "!git add --all; git commit -m \"WIP\"";
-    };
-    delta = {
-      enable = true;
-    };
-    extraConfig = {
+    settings = {
+      alias = {
+        ap = "add --patch";
+        cm = "checkout main";
+        fixup = "!f() { git commit --fixup=$1; }; f";
+        l = "log --oneline --decorate --graph";
+        pp = "pull --prune";
+        s = "status";
+        unwip = "!f() { [[ $(git log -1 --pretty=%s) == 'WIP' ]] && git reset HEAD^; }; f";
+        wip = "!git add --all; git commit -m \"WIP\"";
+      };
       branch = {
         autoSetupRebase = "always";
       };
@@ -210,6 +212,10 @@ in {
       tag = {
         sort = "version:refname";
       };
+      user = {
+        email = "alex.cruice@gmail.com";
+        name = "Alex Cruice";
+      };
     };
     ignores = pkgs.lib.strings.splitString "\n" ''
       ${builtins.readFile (githubGitignore + "/Global/Archives.gitignore")}
@@ -233,8 +239,6 @@ in {
       key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIExM5Y1k1gThK+y7vmBq3hRAL+iIl3fD55LlXawVwsmS";
       signByDefault = true;
     };
-    userEmail = "alex.cruice@gmail.com";
-    userName = "Alex Cruice";
   };
 
   programs.ssh = {
