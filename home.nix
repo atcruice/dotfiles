@@ -93,6 +93,7 @@ in {
     universal-ctags
     unixtools.watch
     vim-vint
+    witr
     yamllint
     yt-dlp
   ];
