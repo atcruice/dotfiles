@@ -11,8 +11,8 @@ set show-all-if-ambiguous on
 set show-all-if-unmodified on
 set show-mode-in-prompt on
 set skip-completed-text on
-set vi-cmd-mode-string "NOR "
-set vi-ins-mode-string "INS "
+set vi-cmd-mode-string "C "
+set vi-ins-mode-string "I "
 
 # do ! history expansion when space entered
 $if Bash
