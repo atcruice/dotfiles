@@ -85,7 +85,6 @@ in {
     nmap
     overmind
     pgformatter
-    python312Packages.grip
     ripgrep
     rmlint
     ruby_3_3
