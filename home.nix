@@ -237,6 +237,7 @@ in {
       tags.*
     '';
     signing = {
+      format = "openpgp";
       key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIExM5Y1k1gThK+y7vmBq3hRAL+iIl3fD55LlXawVwsmS";
       signByDefault = true;
     };
