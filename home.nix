@@ -6,13 +6,6 @@ let
     url = "https://github.com/mrzool/bash-sensible";
   };
 
-  concatDir = dirname: pkgs.lib.pipe dirname [
-    builtins.readDir
-    (pkgs.lib.filterAttrs (_: v: v == "regular"))
-    (pkgs.lib.mapAttrsToList (k: _: k))
-    (pkgs.lib.concatMapStrings (basename: builtins.readFile (dirname + "/${basename}")))
-  ];
-
   githubGitignore = builtins.fetchGit {
     ref = "main";
     rev = "e5323759e387ba347a9d50f8b0ddd16502eb71d4"; # 2022-05-11
