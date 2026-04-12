@@ -19,13 +19,13 @@ let
     url = "https://github.com/github/gitignore";
   };
 
-  vim-argwrap = pkgs.vimUtils.buildVimPlugin {
-    pname = "vim-argwrap";
-    version = "24.1.15.0";
+  vim-argonaut = pkgs.vimUtils.buildVimPlugin {
+    pname = "vim-argonaut";
+    version = "25.3.30.0";
     src = pkgs.fetchgit {
-      hash = "sha256-AJdL25fSwTeQJdS8tTWaIiQ0B661jPCbV8CIRGDeofw=";
-      rev = "refs/tags/24.1.15.0";
-      url = "https://git.sr.ht/~foosoft/vim-argwrap";
+      hash = "sha256-ucEiA7+jWTRYZD3W5N8EkH7QQwB0cK/1nHeR1AeE5FY=";
+      rev = "refs/tags/25.3.30.0";
+      url = "https://git.sr.ht/~foosoft/argonaut.nvim";
     };
   };
 
@@ -276,7 +276,7 @@ in {
       lightline-vim
       splitjoin-vim
       tcomment_vim
-      vim-argwrap
+      vim-argonaut
       vim-eunuch
       vim-fugitive
       vim-gitgutter
