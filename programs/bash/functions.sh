@@ -37,10 +37,10 @@ until_nonzero() (
     echo "$count"
 )
 
-yt-dlp-m4a() {
+yt_dlp_m4a() {
     yt-dlp --format m4a --format-sort size --restrict-filenames "$@"
 }
 
-yt-dlp-mp4() {
+yt_dlp_mp4() {
     yt-dlp --format mp4 --format-sort +size --restrict-filenames "$@"
 }
