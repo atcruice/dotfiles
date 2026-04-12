@@ -260,38 +260,68 @@ in {
   };
 
   programs.neovim = {
-    coc.enable = true;
+    coc = {
+      enable = true;
+      pluginConfig = builtins.readFile ./programs/vim/plugins/coc.vim;
+    };
     defaultEditor = true;
     enable = true;
     extraConfig = ''
       scriptencoding utf-8
-      ${concatDir ./programs/vim/plugins}
       ${builtins.readFile ./programs/vim/settings.vim}
       ${builtins.readFile ./programs/vim/mappings.vim}
     '';
-    plugins = with pkgs.vimPlugins; [
-      ale
-      fzf-vim
-      jellybeans-vim
-      lightline-vim
-      splitjoin-vim
-      tcomment_vim
-      vim-argonaut
-      vim-eunuch
-      vim-fugitive
-      vim-gitgutter
-      vim-gutentags
-      vim-liquid
-      vim-move
-      vim-polyglot
-      vim-rails
-      vim-sensible
-      vim-surround
-      vim-test
-      vim-textobj-indent
-      vim-textobj-user
-      vim-unimpaired
-      vim-yaml-helper
+    plugins = [
+      {
+        config = builtins.readFile ./programs/vim/plugins/ale.vim;
+        plugin = pkgs.vimPlugins.ale;
+        type = "viml";
+      }
+      {
+        config = builtins.readFile ./programs/vim/plugins/fzf-vim.vim;
+        plugin = pkgs.vimPlugins.fzf-vim;
+        type = "viml";
+      }
+      {plugin = pkgs.vimPlugins.jellybeans-vim;}
+      {
+        config = builtins.readFile ./programs/vim/plugins/lightline-vim.vim;
+        plugin = pkgs.vimPlugins.lightline-vim;
+        type = "viml";
+      }
+      {plugin = pkgs.vimPlugins.splitjoin-vim;}
+      {plugin = pkgs.vimPlugins.tcomment_vim;}
+      {
+        config = builtins.readFile ./programs/vim/plugins/vim-argonaut.lua;
+        plugin = vim-argonaut;
+        type = "lua";
+      }
+      {plugin = pkgs.vimPlugins.vim-eunuch;}
+      {plugin = pkgs.vimPlugins.vim-fugitive;}
+      {plugin = pkgs.vimPlugins.vim-gitgutter;}
+      {plugin = pkgs.vimPlugins.vim-gutentags;}
+      {plugin = pkgs.vimPlugins.vim-liquid;}
+      {
+        config = builtins.readFile ./programs/vim/plugins/vim-move.vim;
+        plugin = pkgs.vimPlugins.vim-move;
+        type = "viml";
+      }
+      {plugin = pkgs.vimPlugins.vim-polyglot;}
+      {plugin = pkgs.vimPlugins.vim-rails;}
+      {plugin = pkgs.vimPlugins.vim-sensible;}
+      {plugin = pkgs.vimPlugins.vim-surround;}
+      {
+        config = builtins.readFile ./programs/vim/plugins/vim-test.vim;
+        plugin = pkgs.vimPlugins.vim-test;
+        type = "viml";
+      }
+      {
+        config = builtins.readFile ./programs/vim/plugins/vim-textobj-indent.vim;
+        plugin = vim-textobj-indent;
+        type = "viml";
+      }
+      {plugin = pkgs.vimPlugins.vim-textobj-user;}
+      {plugin = pkgs.vimPlugins.vim-unimpaired;}
+      {plugin = vim-yaml-helper;}
     ];
     viAlias = true;
     vimAlias = true;
