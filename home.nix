@@ -112,7 +112,7 @@ in {
     DIRENV_WARN_TIMEOUT = "0";
     DISABLE_SPRING = "true";
     GPG_TTY = "$(tty)";
-    LESS = "--ignore-case --squeeze-blank-lines --LONG-PROMPT --RAW-CONTROL-CHARS";
+    LESS = "--ignore-case --squeeze-blank-lines --RAW-CONTROL-CHARS --quit-if-one-screen";
     PAGER = "less";
     SSH_AUTH_SOCK = "$HOME/.1password/agent.sock";
   };
