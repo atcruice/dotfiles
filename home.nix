@@ -73,6 +73,7 @@ in {
     delta
     docker
     exercism
+    ipcalc
     ncdu_1
     niv
     nmap
