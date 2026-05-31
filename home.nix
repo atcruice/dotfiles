@@ -239,16 +239,13 @@ in {
   programs.ssh = {
     enable = true;
     enableDefaultConfig = false;
-
-    matchBlocks = {
+    settings = {
       "*" = {
-        addKeysToAgent = "yes";
-        extraOptions = {
-          IgnoreUnknown = "UseKeychain";
-          UseKeychain = "yes";
-        };
-        hashKnownHosts = false;
-        identityAgent = "~/.1password/agent.sock";
+        AddKeysToAgent = "yes";
+        HashKnownHosts = "no";
+        IdentityAgent = "~/.1password/agent.sock";
+        IgnoreUnknown = "UseKeychain";
+        UseKeychain = "yes";
       };
     };
   };
