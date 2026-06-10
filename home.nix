@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 let
   bashSensible = builtins.fetchGit {
@@ -44,6 +44,11 @@ let
     };
   };
 in {
+  nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
+    "vim-liquid"
+    "vim-polyglot"
+  ];
+
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
