@@ -22,7 +22,7 @@ gemscrub() (
 )
 
 rebundle() (
-    bundle && bundle clean --force && bundle pristine && display_notification "Rebundled!"
+    bundle install && bundle clean --force && bundle pristine && display_notification "Rebundled!"
 )
 
 until_nonzero() (
