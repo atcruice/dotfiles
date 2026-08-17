@@ -96,7 +96,7 @@ in {
     yt-dlp
   ];
 
-  home.activation = pkgs.lib.optionalAttrs pkgs.stdenv.isDarwin {
+  home.activation = pkgs.lib.optionalAttrs pkgs.stdenv.hostPlatform.isDarwin {
     impureAction = config.lib.dag.entryAfter ["writeBoundary"] ''
       $DRY_RUN_CMD mkdir -p $VERBOSE_ARG $HOME/.1password
       $DRY_RUN_CMD ln -fs $VERBOSE_ARG $HOME/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock $HOME/.1password/agent.sock
@@ -124,7 +124,7 @@ in {
 
   nixpkgs.config = {
     vim = {
-      darwin = pkgs.stdenv.isDarwin;
+      darwin = pkgs.stdenv.hostPlatform.isDarwin;
       gui = "no";
       perl = true;
     };
